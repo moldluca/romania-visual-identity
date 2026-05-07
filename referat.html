@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Referat — Brand de țară: România</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --albastru-profund: #0B3C5D;
+  --albastru-dark:    #051e30;
+  --galben-vibrant:   #FFC72C;
+  --rosu-accent:      #C8102E;
+  --verde-natura:     #2E7D32;
+  --albastru-deschis: #4DA8DA;
+  --alb:              #FFFFFF;
+  --gri-deschis:      #F5F5F5;
+  --gri-text:         #4A4A4A;
+  --negru:            #111111;
+  --font-titlu:       'Montserrat', system-ui, sans-serif;
+  --font-text:        'Open Sans', system-ui, sans-serif;
+  --font-premium:     'Poppins', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-text);
+  color: var(--gri-text);
+  background: #e2e4e8;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A4 PAGE */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 14mm auto;
+  background: var(--alb);
+  box-shadow: 0 8px 32px rgba(0,0,0,.12);
+  padding: 22mm 22mm 24mm;
+  position: relative;
+  page-break-after: always;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.page.dark-blue { background: var(--albastru-dark); color: #f0f0f0; }
+.page:last-child { page-break-after: auto; }
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4 { font-family: var(--font-titlu); color: var(--albastru-profund); margin: 0 0 .4em; line-height: 1.2; }
+.dark-blue h1, .dark-blue h2, .dark-blue h3 { color: var(--alb); }
+h1 { font-size: 48px; font-weight: 800; letter-spacing: -.02em; }
+h2 { font-size: 22px; font-weight: 700; letter-spacing: -.01em; margin-top: 18px; }
+h3 { font-size: 15px; font-weight: 700; margin-top: 14px; }
+p  { margin: 0 0 .85em; font-size: 12px; line-height: 1.75; text-align: justify; }
+ul, ol { margin: 0 0 .85em; padding-left: 22px; }
+li { margin-bottom: .35em; font-size: 12px; line-height: 1.65; }
+strong { color: var(--albastru-profund); }
+.dark-blue strong { color: var(--galben-vibrant); }
+
+.eyebrow {
+  font-family: var(--font-titlu);
+  text-transform: uppercase;
+  letter-spacing: .28em;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--albastru-deschis);
+  margin-bottom: 8px;
+  display: block;
+}
+.dark-blue .eyebrow { color: var(--galben-vibrant); }
+
+/* TRICOLOR */
+.tricolor {
+  display: flex; height: 4px; border-radius: 2px;
+  overflow: hidden; margin: 10px 0 16px;
+}
+.tricolor span { flex: 1; }
+.tc1 { background: #002B7F; }
+.tc2 { background: #FCD116; }
+.tc3 { background: #CE1126; }
+
+/* SECTION NUMBER */
+.sec-num {
+  font-family: var(--font-titlu);
+  font-size: 84px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--galben-vibrant);
+  opacity: .85;
+  letter-spacing: -.04em;
+  margin-bottom: 4px;
+}
+
+/* PAGE META */
+.page-meta {
+  position: absolute; bottom: 14mm; left: 22mm; right: 22mm;
+  display: flex; justify-content: space-between;
+  font-family: var(--font-titlu);
+  font-size: 8.5px; font-weight: 600; letter-spacing: .15em;
+  color: #888; text-transform: uppercase;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 8px;
+}
+.dark-blue .page-meta { color: rgba(255,255,255,.5); border-color: rgba(255,255,255,.15); }
+
+/* SWOT GRID */
+.swot {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 14px;
+}
+.swot-cell {
+  border-radius: 8px;
+  padding: 14px 16px;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.swot-cell h3 {
+  margin: 0 0 8px; font-size: 13px;
+  display: flex; align-items: center; gap: 8px;
+}
+.swot-cell h3::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.swot-cell ul { padding-left: 16px; margin: 0; }
+.swot-cell li { font-size: 11px; line-height: 1.55; margin-bottom: 4px; }
+.swot-cell.strengths     { background: #eaf4ee; border-left: 3px solid var(--verde-natura); }
+.swot-cell.strengths h3::before { background: var(--verde-natura); }
+.swot-cell.weaknesses    { background: #fdecec; border-left: 3px solid var(--rosu-accent); }
+.swot-cell.weaknesses h3::before { background: var(--rosu-accent); }
+.swot-cell.opportunities { background: #fffaeb; border-left: 3px solid var(--galben-vibrant); }
+.swot-cell.opportunities h3::before { background: var(--galben-vibrant); }
+.swot-cell.threats       { background: #f0f4f8; border-left: 3px solid var(--albastru-profund); }
+.swot-cell.threats h3::before { background: var(--albastru-profund); }
+
+/* CONCEPT BOX */
+.concept-box {
+  background: linear-gradient(135deg, var(--albastru-profund) 0%, var(--albastru-dark) 100%);
+  color: var(--alb);
+  padding: 28px 32px; border-radius: 10px;
+  margin: 14px 0;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  text-align: center;
+}
+.concept-box .label {
+  font-family: var(--font-titlu);
+  font-size: 9px; font-weight: 700; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--galben-vibrant);
+  margin-bottom: 12px; display: block;
+}
+.concept-box .tagline {
+  font-family: var(--font-titlu);
+  font-size: 26px; font-weight: 800; line-height: 1.15;
+  letter-spacing: -.01em; margin-bottom: 10px;
+}
+.concept-box .desc {
+  font-size: 11.5px; color: rgba(255,255,255,.7);
+  max-width: 56ch; margin: 0 auto;
+}
+
+/* PILLARS */
+.pillars {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 10px;
+  margin-top: 12px;
+}
+.pillar {
+  background: var(--gri-deschis);
+  border-top: 3px solid var(--albastru-profund);
+  padding: 12px 14px; border-radius: 6px;
+  -webkit-print-color-adjust: exact;
+}
+.pillar.galben { border-top-color: var(--galben-vibrant); }
+.pillar.rosu   { border-top-color: var(--rosu-accent); }
+.pillar.verde  { border-top-color: var(--verde-natura); }
+.pillar h4 {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .15em;
+  color: var(--albastru-profund); margin-bottom: 6px;
+}
+.pillar p { font-size: 10.5px; margin: 0; line-height: 1.5; }
+
+/* COVER STYLES */
+.cover-content {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 240mm; text-align: center;
+}
+.cover-content .tricolor {
+  width: 80px; margin: 0 auto 28px;
+}
+.cover-content .logo {
+  height: 90px; margin-bottom: 28px;
+}
+.cover-content .doc-type {
+  font-family: var(--font-titlu);
+  font-size: 11px; font-weight: 700; letter-spacing: .35em;
+  text-transform: uppercase; color: var(--galben-vibrant);
+  margin-bottom: 16px;
+}
+.cover-content .title {
+  font-family: var(--font-titlu);
+  font-size: 56px; font-weight: 900; color: var(--alb);
+  letter-spacing: -.02em; line-height: 1.05;
+  margin-bottom: 12px;
+}
+.cover-content .subtitle {
+  font-family: var(--font-premium);
+  font-size: 16px; font-style: italic; color: var(--galben-vibrant);
+  margin-bottom: 36px; letter-spacing: .04em;
+}
+.cover-content .accent-line {
+  width: 60px; height: 2px; background: var(--galben-vibrant);
+  margin: 0 auto 36px;
+}
+.cover-content .meta {
+  font-family: var(--font-titlu);
+  font-size: 11px; text-transform: uppercase; letter-spacing: .25em;
+  color: rgba(255,255,255,.55); margin-bottom: 10px;
+}
+.cover-content .team {
+  font-size: 11px; color: rgba(255,255,255,.45);
+  margin-top: 36px;
+}
+
+/* QUOTE */
+.quote {
+  border-left: 4px solid var(--galben-vibrant);
+  background: #fffaeb;
+  padding: 14px 18px;
+  margin: 14px 0;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--gri-text);
+  -webkit-print-color-adjust: exact;
+}
+
+/* IMPACT GRID */
+.impact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  margin-top: 12px;
+}
+.impact-cell {
+  background: var(--gri-deschis);
+  padding: 12px 14px; border-radius: 6px;
+  border-left: 3px solid var(--albastru-profund);
+  -webkit-print-color-adjust: exact;
+}
+.impact-cell h4 {
+  font-size: 11px; color: var(--albastru-profund);
+  margin-bottom: 4px; letter-spacing: .04em;
+}
+.impact-cell p { font-size: 11px; margin: 0; line-height: 1.5; }
+
+/* PRINT */
+@page { size: A4; margin: 0; }
+@media print {
+  body { background: var(--alb); }
+  .page {
+    margin: 0; box-shadow: none;
+    width: 210mm; height: 297mm;
+    min-height: unset; overflow: hidden;
+    page-break-after: always;
+  }
+  .no-print { display: none !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+<body>
+
+<button class="no-print" onclick="window.print()" style="position:fixed;top:14px;right:14px;z-index:9999;background:#0B3C5D;color:#fff;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;padding:10px 16px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.2);">
+  Salvează ca PDF
+</button>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- COVER -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page dark-blue">
+  <div class="cover-content">
+    <div class="tricolor"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+    <img class="logo" src="clean/transparent/02-logo-fundal-negru.png" alt="România">
+    <div class="doc-type">Referat · Brand de țară</div>
+    <h1 class="title">România</h1>
+    <p class="subtitle">Unde tradiția întâlnește viitorul</p>
+    <div class="accent-line"></div>
+    <div class="meta">Identitate Vizuală Națională · 2026</div>
+    <div class="team">Moldovan Luca · Popescu Oana · Matioca Daria · Gulias Bianca · Gabona David</div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- 1 · INTRODUCERE -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page">
+  <span class="eyebrow">Capitolul 1</span>
+  <div class="sec-num">01</div>
+  <h1 style="font-size:34px;">Introducere</h1>
+  <div class="tricolor"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+
+  <h2>Ce înseamnă un brand de țară</h2>
+  <p>Un <strong>brand de țară</strong> (în engleză <em>nation branding</em>) este procesul prin care o națiune își construiește, comunică și gestionează imaginea sa internațională. Spre deosebire de un brand comercial, brandul de țară integrează cultura, istoria, valorile, peisajul, oamenii și ambițiile unei nații într-o narativă coerentă, recognoscibilă la nivel global.</p>
+
+  <p>Conceptul a fost popularizat de Simon Anholt în 1998 și măsurat anual prin indici precum <em>Nation Brands Index</em>. Astăzi, fiecare țară competitivă investește deliberat în propria sa identitate vizuală: Noua Zeelandă cu „100% Pure", Spania cu „Marca España", Islanda care s-a reinventat după criza din 2008, Portugalia cu „Can't skip Portugal".</p>
+
+  <h2>De ce este important</h2>
+  <p>Într-o economie globalizată, brandul unei țări influențează direct cinci dimensiuni esențiale:</p>
+  <ul>
+    <li><strong>Turism</strong> — atrage vizitatori și generează venituri (în 2023, turismul a reprezentat 9,1% din PIB-ul global).</li>
+    <li><strong>Investiții străine directe</strong> — un brand puternic comunică stabilitate, predictibilitate și deschidere către capital.</li>
+    <li><strong>Exporturi</strong> — produsele „Made in Germany", „Made in Italy" sau „Made in Japan" se vând la preț premium tocmai datorită reputației de țară.</li>
+    <li><strong>Talent și diaspora</strong> — un brand atractiv reține tinerii educați și mobilizează diaspora ca ambasador organic.</li>
+    <li><strong>Soft power</strong> — capacitatea de a influența politică, cultural și diplomatic alte națiuni fără constrângere.</li>
+  </ul>
+
+  <div class="quote">
+    „A nation's brand is its most valuable asset. It is the difference between being chosen and being overlooked." — Simon Anholt, fondatorul disciplinei nation branding
+  </div>
+
+  <h2>Provocarea României</h2>
+  <p>În prezent, România suferă de o <strong>imagine internațională fragmentată</strong>: stereotipuri istorice (Dracula, sărăcie, migrație), conflicte de percepție (țară modernă UE vs. clișee balcanice) și absența unei narative coerente. Studiul de față propune un brand național unificat, construit pe baza unei analize riguroase a punctelor forte și a oportunităților reale ale României contemporane.</p>
+
+  <div class="page-meta"><span>Referat · Brand de țară · România</span><span>P02 / 06</span></div>
+</section>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- 2 · ANALIZA ROMÂNIEI -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page">
+  <span class="eyebrow">Capitolul 2</span>
+  <div class="sec-num">02</div>
+  <h1 style="font-size:34px;">Analiza României</h1>
+  <div class="tricolor"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+
+  <p>Pentru a construi un brand de țară credibil, am realizat o analiză <strong>SWOT</strong> a României, identificând cele patru categorii fundamentale care influențează imaginea națională: puncte forte, puncte slabe, oportunități și provocări.</p>
+
+  <div class="swot">
+    <div class="swot-cell strengths">
+      <h3>Puncte forte</h3>
+      <ul>
+        <li>Diversitate naturală excepțională: Carpați, Delta Dunării (UNESCO), Marea Neagră</li>
+        <li>8 situri UNESCO și un patrimoniu cultural bogat</li>
+        <li>Tradiții vii încă practicate: Doina, Călușul, Colindele (UNESCO)</li>
+        <li>Forță de muncă tehnică recunoscută în IT și inginerie</li>
+        <li>Mix unic latin-balcanic-est-european</li>
+        <li>Membră UE și NATO — stabilitate politică</li>
+        <li>Olimpici internaționali la matematică, informatică, robotică</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell weaknesses">
+      <h3>Puncte slabe</h3>
+      <ul>
+        <li>Imagine internațională dominată de stereotipuri (Dracula, sărăcie)</li>
+        <li>Lipsa unei narative naționale unificate</li>
+        <li>Brand-uri locale necoordonate — confuzie vizuală</li>
+        <li>Infrastructură de comunicare turistică insuficientă</li>
+        <li>Bugete reduse pentru promovare internațională</li>
+        <li>Subutilizarea diasporei (peste 5 milioane) ca ambasador</li>
+        <li>Inconsistență între mesajele oficiale și realitatea percepută</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell opportunities">
+      <h3>Oportunități</h3>
+      <ul>
+        <li>Turism experiențial în creștere globală (autenticitate &gt; comercial)</li>
+        <li>Poziționare ca hub tech est-european („Silicon Valley estic")</li>
+        <li>Generația Z atrasă de destinații naturale, mai puțin masificate</li>
+        <li>Cerere globală pentru tradiții vii și meșteșuguri autentice</li>
+        <li>Valorificarea anului centenar al Marii Uniri (continuă să rezoneze)</li>
+        <li>Creșterea brandurilor românești cu recunoaștere globală</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell threats">
+      <h3>Provocări</h3>
+      <ul>
+        <li>Competiție directă: Polonia, Cehia, Bulgaria — bugete mai mari</li>
+        <li>Migrația tinerilor calificați (brain drain)</li>
+        <li>Imagini negative din presa internațională</li>
+        <li>Lipsa continuității politicilor de branding la schimbarea guvernelor</li>
+        <li>Riscul de superficialitate dacă brandul rămâne doar grafic</li>
+        <li>Saturarea pieței globale a brand-urilor de țară</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>Referat · Brand de țară · România</span><span>P03 / 06</span></div>
+</section>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- 3 · PROPUNEREA DE BRAND -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page">
+  <span class="eyebrow">Capitolul 3</span>
+  <div class="sec-num">03</div>
+  <h1 style="font-size:34px;">Propunerea de brand</h1>
+  <div class="tricolor"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+
+  <p>Pe baza analizei SWOT, echipa noastră a definit un concept de brand care valorifică simultan punctele forte (tradiții vii, diversitate naturală) și oportunitățile (poziționarea tech, turismul experiențial), fără a ignora dualitatea reală a țării.</p>
+
+  <div class="concept-box">
+    <span class="label">Conceptul ales</span>
+    <div class="tagline">„România — Unde tradiția<br>întâlnește viitorul"</div>
+    <div class="desc">Un brand al armoniei dintre rădăcini autentice și ambiție contemporană — nu opoziție, ci sinteză.</div>
+  </div>
+
+  <h2>Cei patru piloni ai brandului</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <h4>Patrimoniu</h4>
+      <p>Castele, mănăstiri, situri UNESCO, sate tradiționale — istorie vie, nu muzealizată.</p>
+    </div>
+    <div class="pillar galben">
+      <h4>Natură</h4>
+      <p>Carpați, Delta, Marea Neagră, păduri virgine — biodiversitatea Europei într-o țară.</p>
+    </div>
+    <div class="pillar rosu">
+      <h4>Tradiție</h4>
+      <p>Ie, doina, călușul, meșteșuguri vii — cultură practicată, nu doar conservată.</p>
+    </div>
+    <div class="pillar verde">
+      <h4>Inovație</h4>
+      <p>Hub tech est-european, olimpici, inventatori, robotică — viitorul construit aici.</p>
+    </div>
+  </div>
+
+  <h2>Sistemul vizual</h2>
+  <p>Identitatea vizuală traduce conceptul în elemente concrete și consistente, aplicabile pe toate suporturile fizice și digitale:</p>
+  <ul>
+    <li><strong>Logo:</strong> simbolul „R" stilizat combinat cu wordmark „România" — recognoscibil instantaneu, scalabil de la favicon la billboard.</li>
+    <li><strong>Paleta cromatică:</strong> albastru-profund (#0B3C5D — autoritate, încredere), galben-vibrant (#FFC72C — energie, optimism), roșu-accent (#C8102E — identitate națională), albastru-deschis (#4DA8DA — modernitate digitală).</li>
+    <li><strong>Tipografie:</strong> Montserrat (titluri, autoritate) + Open Sans (text, lizibilitate) — combinație internațională modernă.</li>
+    <li><strong>Tricolor reinterpretat:</strong> bandă subtilă de 4px care apare ca semnătură vizuală pe materiale, fără a deveni element dominant.</li>
+    <li><strong>Tonul vocii:</strong> cald, autentic, ambițios, deschis — fără formalism rece, fără patetism populist.</li>
+  </ul>
+
+  <div class="page-meta"><span>Referat · Brand de țară · România</span><span>P04 / 06</span></div>
+</section>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- 4 · JUSTIFICARE -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page">
+  <span class="eyebrow">Capitolul 4</span>
+  <div class="sec-num">04</div>
+  <h1 style="font-size:34px;">Justificare</h1>
+  <div class="tricolor"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+
+  <h2>De ce „tradiția întâlnește viitorul"</h2>
+  <p>Conceptul ales nu este o construcție artificială, ci reflectă <strong>realitatea contemporană a României</strong>. Spre deosebire de multe țări europene unde tradițiile s-au păstrat exclusiv în muzee, România are privilegiul unor obiceiuri vii — practicate activ, nu reconstituite. Doina, Călușul, Colindele de Crăciun și tehnica olăritului de la Horezu sunt înscrise pe Lista UNESCO a patrimoniului cultural imaterial al umanității.</p>
+
+  <p>În același timp, România modernă a devenit un <strong>hub tehnologic recunoscut internațional</strong>: peste 200.000 de specialiști IT, prezența unor companii globale de tech, performanțe la olimpiade internaționale de informatică și robotică. Tinerii români schimbă lumea exact în domeniile cele mai avansate — exact ce caută investitorii și partenerii internaționali.</p>
+
+  <h2>Tensiunea creativă, nu opoziție</h2>
+  <p>Sloganul nu juxtapune două lumi în conflict, ci celebrează coabitarea lor armonică. Bunica care țese o ie cu motive vechi de 500 de ani și nepoata care lansează un startup la San Francisco aparțin aceleiași narațiuni. Această dualitate este exact ceea ce caută <strong>călătorul și investitorul modern</strong>: autenticitate fără izolare, modernitate fără pierderea identității.</p>
+
+  <h2>Coerența vizuală cu identitatea națională</h2>
+  <p>Paleta albastru-galben-roșu evocă tricolorul național fără a fi o reproducere literală. Albastrul-profund preia greutatea simbolică a steagului, galbenul-vibrant comunică optimism și energie tinerească, iar roșul-accent rămâne semnătura identitară. Tricolorul propriu-zis revine ca element grafic discret (bandă de 4px) — prezent dar nu dominant.</p>
+
+  <p>Tipografia Montserrat — fonts modernă, geometrică, internațională — semnalează deschiderea spre lume și aspirațiile contemporane. Combinarea ei cu motive populare stilizate creează exact dualismul brand-ului: <strong>rădăcini + ambiție</strong>, în fiecare aplicație vizuală.</p>
+
+  <div class="quote">
+    Brandul „România — Unde tradiția întâlnește viitorul" nu inventează o realitate. O exprimă pe cea care există deja, dar care până acum nu avea o formă vizuală coerentă pentru a fi recunoscută la nivel global.
+  </div>
+
+  <h2>Diferențierea față de competiție</h2>
+  <p>În timp ce Polonia comunică „ambiție industrială" și Cehia „cultură europeană centrală", România poate ocupa o poziție unică: <strong>autenticitatea care funcționează</strong>. Țara unde poți merge dimineața la o stână în munți și după-amiaza într-un coworking de înaltă tehnologie. Această juxtapunere nu este disponibilă altor țări din regiune cu aceeași credibilitate.</p>
+
+  <div class="page-meta"><span>Referat · Brand de țară · România</span><span>P05 / 06</span></div>
+</section>
+
+<!-- ═════════════════════════════════════════════════ -->
+<!-- 5 · CONCLUZII -->
+<!-- ═════════════════════════════════════════════════ -->
+<section class="page">
+  <span class="eyebrow">Capitolul 5</span>
+  <div class="sec-num" style="font-size:64px; margin-bottom:0;">05</div>
+  <h1 style="font-size:30px;">Concluzii</h1>
+  <div class="tricolor" style="margin:8px 0 12px;"><span class="tc1"></span><span class="tc2"></span><span class="tc3"></span></div>
+
+  <p style="margin-bottom:.6em;">Implementat coerent, brandul „<strong>România — Unde tradiția întâlnește viitorul</strong>" are potențialul de a transforma poziționarea țării pe scena internațională în următorii 5-10 ani, generând impact măsurabil în multiple direcții.</p>
+
+  <h2 style="font-size:18px; margin-top:12px;">Impactul potențial</h2>
+  <div class="impact-grid" style="grid-template-columns:repeat(3,1fr); gap:8px; margin-top:8px;">
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Turism</h4>
+      <p style="font-size:10px; line-height:1.45;">Audiență nouă (millennials, Gen Z), turism experiențial. Creștere estimată 25-40% în 5 ani.</p>
+    </div>
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Investiții străine</h4>
+      <p style="font-size:10px; line-height:1.45;">Poziționare clară ca destinație tech &amp; inovație — atragere capital în IT, R&amp;D.</p>
+    </div>
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Diasporă</h4>
+      <p style="font-size:10px; line-height:1.45;">Reconectare emoțională a celor 5M de români. Ambasadori organici, retur calificat.</p>
+    </div>
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Exporturi</h4>
+      <p style="font-size:10px; line-height:1.45;">„Made in Romania" devine recognoscibil. Premium pe tech, alimentare, artizanat.</p>
+    </div>
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Identitate națională</h4>
+      <p style="font-size:10px; line-height:1.45;">Consolidare simbolică internă — brand cu care cetățenii se pot identifica.</p>
+    </div>
+    <div class="impact-cell" style="padding:9px 11px;">
+      <h4 style="font-size:10.5px; margin-bottom:3px;">Soft power</h4>
+      <p style="font-size:10px; line-height:1.45;">Influență culturală sporită în UE și regional — cultură, gastronomie, tehnologie.</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:18px; margin-top:14px;">Condiții pentru succes</h2>
+  <p style="margin-bottom:.4em; font-size:11.5px;">Un brand de țară funcționează doar dacă <strong>realitatea îl confirmă</strong>. Pentru impact real sunt necesare:</p>
+  <ul style="margin-bottom:.6em;">
+    <li style="font-size:11px;">Continuitate politică — implementare pe termen lung (minim 10 ani), independent de schimbările guvernamentale.</li>
+    <li style="font-size:11px;">Adoptarea brand-ului de către ambasade, ministerul turismului și agențiile oficiale.</li>
+    <li style="font-size:11px;">Implicarea diasporei și a sectorului privat — brandul trebuie să devină al tuturor.</li>
+    <li style="font-size:11px;">Comunicare consistentă în toate canalele: digital, print, televiziune, evenimente internaționale.</li>
+  </ul>
+
+  <h2 style="font-size:18px; margin-top:12px;">Roadmap propus</h2>
+  <p style="font-size:11.5px; margin-bottom:.6em;">Implementarea se desfășoară pe <strong>36 de luni</strong>, în trei faze: lansare oficială (1-6), consolidare pe canalele cheie (7-18), expansiune internațională și măsurare (19-36). Detaliile tehnice sunt în brand book-ul aferent — manualul operațional de 259 pagini.</p>
+
+  <!-- Atribuire echipă -->
+  <div style="margin-top:14px; background:var(--gri-deschis); border-left:3px solid var(--galben-vibrant); padding:11px 14px; border-radius:4px; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+    <div style="font-family:var(--font-titlu); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--albastru-profund); margin-bottom:5px;">Referat realizat de</div>
+    <div style="font-family:var(--font-titlu); font-size:11.5px; font-weight:600; color:var(--gri-text); line-height:1.5;">
+      Moldovan Luca · Popescu Oana · Matioca Daria · Gulias Bianca · Gabona David
+    </div>
+  </div>
+
+  <div class="page-meta"><span>Referat · Brand de țară · România</span><span>P06 / 06</span></div>
+</section>
+
+</body>
+</html>

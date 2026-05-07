@@ -39,9 +39,10 @@ const TRANSLATIONS = {
     'lbl-voronet':    'Albastrul de Voroneț',
     'dl-eyebrow':     'România · Brand Kit 2026',
     'dl-title':       'Descarcă Brand Kit-ul',
-    'dl-desc':        'Logo-uri SVG/PNG, paleta de culori, ghid tipografie, brand book 259 pagini. Tot ce ai nevoie pentru a aplica corect identitatea vizuală națională.',
+    'dl-desc':        'Logo-uri SVG/PNG, paleta de culori, ghid tipografie, brand book complet (132 pagini) și referat de prezentare. Tot ce ai nevoie pentru a aplica corect identitatea vizuală națională.',
     'btn-dl':         'Download Brand Kit',
-    'btn-dl-sec':     'Brand Book Online',
+    'btn-dl-sec':     'Brand Book',
+    'btn-referat':    'Referat Prezentare',
     'footer-copy':    '© 2026 · România · Identitate Vizuală Națională',
   },
   en: {
@@ -84,9 +85,10 @@ const TRANSLATIONS = {
     'lbl-voronet':    'The Blue of Voroneț',
     'dl-eyebrow':     'Romania · Brand Kit 2026',
     'dl-title':       'Download the Brand Kit',
-    'dl-desc':        'SVG/PNG logos, color palette, typography guide, brand book 259 pages. Everything you need to correctly apply the national visual identity.',
+    'dl-desc':        'SVG/PNG logos, color palette, typography guide, full brand book (132 pages) and presentation paper. Everything you need to correctly apply the national visual identity.',
     'btn-dl':         'Download Brand Kit',
-    'btn-dl-sec':     'Brand Book Online',
+    'btn-dl-sec':     'Brand Book',
+    'btn-referat':    'Presentation Paper',
     'footer-copy':    '© 2026 · Romania · National Visual Identity',
   }
 };

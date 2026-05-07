@@ -42,11 +42,11 @@ body {
 /* A4 PAGE */
 .page {
   width: 210mm;
-  min-height: 297mm;
+  height: 297mm;
   margin: 14mm auto;
   background: var(--alb);
   box-shadow: 0 8px 32px rgba(0,0,0,.12);
-  padding: 18mm 16mm 22mm;
+  padding: 16mm 16mm 20mm;
   position: relative;
   overflow: hidden;
   page-break-after: always;
@@ -86,15 +86,15 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
 
 /* TRICOLOR */
 .tricolor {
-  display: flex; height: 7px; border-radius: 3px;
-  overflow: hidden; margin: 12px 0;
+  height: 7px; border-radius: 3px; margin: 10px 0;
+  background: linear-gradient(90deg,
+    var(--albastru-profund) 0% 33.33%,
+    var(--galben-vibrant)   33.33% 66.66%,
+    var(--rosu-accent)      66.66% 100%);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-.tricolor span { flex: 1; }
-.tricolor span:nth-child(1) { background: var(--albastru-profund); }
-.tricolor span:nth-child(2) { background: var(--galben-vibrant); }
-.tricolor span:nth-child(3) { background: var(--rosu-accent); }
+.tricolor span { display: none; }
 
 /* PAGE META */
 .page-meta {
@@ -385,17 +385,19 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
 /* PRINT */
 @page { size: A4; margin: 0; }
 @media print {
-  body { background: var(--alb); }
+  html, body { background: white; }
   .page {
-    margin: 0;
-    box-shadow: none;
-    width: 210mm;
-    height: 297mm;
-    min-height: unset;
-    overflow: hidden;
-    page-break-after: always;
-    break-after: page;
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    padding: 14mm 15mm 18mm !important;
   }
+  .page img { max-width: 100%; }
   .no-print { display: none !important; }
   * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
@@ -4556,7 +4558,7 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
 
   <div class="building" style="margin-bottom:14px;">
     <div style="width:100%; height:210px; border-radius:8px; overflow:hidden;">
-      <img src="../photos/mockups/agency-window.png"
+      <img src="../photos/mockups/agency-stand-expo.png"
            style="width:100%; height:100%; object-fit:cover; display:block;"
            alt="Vitrină agenție turism">
     </div>
@@ -4846,14 +4848,9 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
     </div>
     <div>
       <h3 style="font-size:13px; margin-bottom:8px;">Uniforma consultantului</h3>
-      <div class="uniform-mockup">
-        <div class="shirt">
-          <div class="shirt-body" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
-            <div class="shirt-collar"></div>
-            <img src="../clean/05-doar-simbol.png" alt="logo" style="filter:brightness(0) invert(1); height:14px;">
-            <div class="shirt-badge">TURISM RO</div>
-          </div>
-          <div style="background:#e5e7eb; height:8px; border-radius:0 0 4px 4px;"></div>
+      <div style="display:flex; gap:14px; align-items:flex-start;">
+        <div style="flex-shrink:0; width:140px; border-radius:8px; overflow:hidden;">
+          <img src="../photos/mockups/uniform-staff.png" style="width:100%; display:block;" alt="Uniformă consultant turism România">
         </div>
         <div style="font-size:10.5px; line-height:1.7;">
           <p style="margin:0 0 6px;"><strong>Variantă 1 (formală):</strong> Cămașă albastru profund #0B3C5D cu broderie logo pe piept stânga. Pantalon negru sau bleumarin.</p>
@@ -4880,7 +4877,7 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
   </div>
   <div class="building" style="margin-bottom:14px;">
     <div style="width:100%; height:200px; border-radius:8px; overflow:hidden;">
-      <img src="../photos/mockups/agency-stand-expo.png"
+      <img src="../photos/mockups/agency-window.png"
            style="width:100%; height:100%; object-fit:cover; display:block;"
            alt="Stand expozițional agenție turism">
     </div>
@@ -4925,22 +4922,8 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
   <div class="grid-2" style="gap:20px; align-items:start; margin-bottom:16px;">
     <div>
       <h3 style="font-size:13px; margin-bottom:12px;">Mockup roll-up 85×200cm</h3>
-      <div class="rollup-mockup" style="width:130px;">
-        <div class="rollup-top">
-          <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="filter:brightness(0) invert(1);">
-          <div class="tagline">Unde tradiția întâlnește viitorul</div>
-        </div>
-        <div class="rollup-body">
-          <div class="rollup-img"></div>
-          <div class="destination">TRANSILVANIA</div>
-          <div class="desc">Castele medievale, peisaje montane și gastronomie autentică vă așteaptă în inima României.</div>
-          <div class="rollup-img" style="background:linear-gradient(135deg,#2E7D32,#1a4d1a); height:35px; margin-bottom:5px;"></div>
-          <div class="destination">DELTA DUNĂRII</div>
-          <div class="desc">Cel mai mare complex de zone umede din Europa. Biodiversitate unică mondială.</div>
-        </div>
-        <div class="rollup-bottom">
-          <span>www.romania.travel · 0800 123 456</span>
-        </div>
+      <div style="border-radius:8px; overflow:hidden;">
+        <img src="../photos/mockups/rollup-banner.png" style="width:100%; max-height:110mm; object-fit:cover; display:block;" alt="Roll-up banner România">
       </div>
     </div>
     <div>
@@ -5103,17 +5086,8 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
   </div>
   <div style="margin-bottom:16px;">
     <h3 style="font-size:13px; margin-bottom:10px;">Mockup vehicul branded</h3>
-    <div class="car-mockup">
-      <div style="font-size:8px; color:#888; font-family:var(--font-titlu); text-transform:uppercase; letter-spacing:.15em; margin-bottom:8px;">Vedere laterală · Aplicare branding auto</div>
-      <div class="car-body" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
-        <img src="../clean/03-logo-orizontal.png" alt="Logo România">
-      </div>
-      <div class="car-windows" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
-      <div class="car-wheels" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
-        <div class="car-wheel" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
-        <div class="car-wheel" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
-      </div>
-      <div style="font-size:8px; color:#888; font-family:var(--font-titlu); margin-top:8px;">Albastru profund #0B3C5D · Logo alb centrat · Număr de contact lateral</div>
+    <div style="border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/car-branded.png" style="width:100%; max-height:90mm; object-fit:cover; display:block;" alt="Vehicul branduit România turism">
     </div>
   </div>
   <div class="grid-2" style="gap:14px;">
@@ -6605,9 +6579,25 @@ li { margin-bottom: .3em; font-size: 12.5px; line-height: 1.55; }
   <p class="lead" style="margin-bottom:14px; color:rgba(255,255,255,.85);">Interfață digitală one-page care prezintă identitatea vizuală a României publicului general, presei și partenerilor internaționali. Construită exclusiv cu HTML, CSS și JavaScript pur — zero dependențe externe, performanță maximă.</p>
 
   
-  <div style="text-align:center; margin-bottom:14px;">
-    <img src="../photos/mockups/website-laptop.png" alt="Website România afișat pe laptop" style="width:100%; max-width:520px; border-radius:8px;">
-    <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-top:8px;">romania.perpetuummobile.tech · Live</div>
+  <div class="grid-2" style="gap:16px; margin-bottom:14px; align-items:start;">
+    <div>
+      <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:6px;">Website · Prezentare identitate vizuală</div>
+      <div style="border-radius:8px; overflow:hidden; margin-bottom:8px;">
+        <img src="../photos/mockups/website-laptop.png" alt="Website România afișat pe laptop" style="width:100%; display:block;">
+      </div>
+      <a href="../index.html" style="display:inline-flex; align-items:center; gap:8px; background:#FFC72C; color:#0B3C5D; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.12em; padding:8px 16px; border-radius:20px; text-decoration:none; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        Deschide Website
+      </a>
+    </div>
+    <div>
+      <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:6px;">Aplicație mobilă · România Turism</div>
+      <div style="border-radius:12px; overflow:hidden; margin-bottom:8px; max-width:180px;">
+        <img src="../photos/mockups/phone-app.png" alt="Aplicație mobilă România" style="width:100%; max-height:120mm; object-fit:contain; display:block;">
+      </div>
+      <a href="../app-mockup/index.html" style="display:inline-flex; align-items:center; gap:8px; background:#FFC72C; color:#0B3C5D; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.12em; padding:8px 16px; border-radius:20px; text-decoration:none; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        Deschide Aplicația
+      </a>
+    </div>
   </div>
 
   <div class="grid-2" style="gap:12px;">
