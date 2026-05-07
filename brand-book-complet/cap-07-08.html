@@ -1,0 +1,2127 @@
+<!-- CAP 7-8 -->
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cap. 7–8 — Clădiri, Spații & Documente Oficiale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared-css.css">
+<style>
+/* ---- Extra styles pentru Cap 7-8 ---- */
+.photo-placeholder {
+  width: 100%; border-radius: 8px; overflow: hidden;
+  position: relative; display: flex; align-items: center; justify-content: center;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.photo-placeholder .ph-label {
+  position: absolute; color: rgba(255,255,255,.85);
+  font-family: var(--font-titlu); font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .18em; text-align: center;
+  padding: 10px;
+}
+.ph-img-exterior {
+  background: linear-gradient(160deg, #0B3C5D 0%, #1a6da8 40%, #1e3a5f 70%, #051e30 100%);
+  height: 260px;
+}
+.ph-img-interior {
+  background: linear-gradient(145deg, #0B3C5D 0%, #2a5f8a 35%, #FFC72C22 60%, #0B3C5D 100%);
+  height: 220px;
+}
+.ph-img-signage {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0B3C5D 40%, #4DA8DA 80%, #0B3C5D 100%);
+  height: 220px;
+}
+.ph-img-window {
+  background: linear-gradient(160deg, #051e30 0%, #0B3C5D 45%, #FFC72C33 70%, #0d2e4a 100%);
+  height: 220px;
+}
+.ph-img-expo {
+  background: linear-gradient(140deg, #0B3C5D 0%, #1a5880 30%, #FFC72C44 55%, #0B3C5D 100%);
+  height: 220px;
+}
+.checklist { list-style: none; padding: 0; margin: 0; }
+.checklist li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 7px 10px; border-bottom: 1px solid #e5e7eb;
+  font-size: 11.5px;
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li .ck-num {
+  min-width: 22px; height: 22px; border-radius: 50%;
+  background: var(--albastru-profund); color: white;
+  font-family: var(--font-titlu); font-size: 9px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.rollup-mockup {
+  width: 110px; border-radius: 6px; overflow: hidden;
+  border: 1px solid #d0d5dd; box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  background: var(--alb); margin: 0 auto;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.rollup-top {
+  background: var(--albastru-profund); padding: 10px 8px 8px;
+  text-align: center; color: white;
+}
+.rollup-top img { height: 22px; margin-bottom: 4px; }
+.rollup-top .tagline { font-size: 5.5px; letter-spacing: .1em; font-family: var(--font-titlu); color: var(--galben-vibrant); text-transform: uppercase; }
+.rollup-body { padding: 8px; }
+.rollup-body .destination { font-family: var(--font-titlu); font-size: 7px; font-weight: 700; color: var(--albastru-profund); margin-bottom: 2px; }
+.rollup-body .desc { font-size: 5.5px; color: #666; line-height: 1.4; margin-bottom: 5px; }
+.rollup-img { background: linear-gradient(135deg,#4DA8DA,#0B3C5D); height: 45px; border-radius: 3px; margin-bottom: 5px; }
+.rollup-bottom { background: var(--galben-vibrant); padding: 4px 6px; text-align: center; }
+.rollup-bottom span { font-family: var(--font-titlu); font-size: 6px; font-weight: 800; color: var(--albastru-profund); }
+.poster-a1 {
+  background: var(--alb); border: 1px solid #d0d5dd; border-radius: 6px;
+  padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.poster-a1 .top-bar { background: var(--albastru-profund); padding: 10px 12px; border-radius: 4px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.poster-a1 .top-bar img { height: 24px; }
+.poster-a1 .hero { background: linear-gradient(135deg,#1a6da8,#0B3C5D); height: 80px; border-radius: 4px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
+.poster-a1 .hero-text { color: white; font-family: var(--font-titlu); font-size: 13px; font-weight: 800; letter-spacing: .05em; }
+.poster-a1 .sub-text { color: rgba(255,255,255,.8); font-size: 7px; font-family: var(--font-titlu); display: block; margin-top: 2px; letter-spacing: .2em; }
+.poster-a1 .destinations { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; margin-bottom: 8px; }
+.poster-a1 .dest-card { background: var(--gri-deschis); border-radius: 3px; padding: 5px; }
+.poster-a1 .dest-card .name { font-family: var(--font-titlu); font-size: 7px; font-weight: 700; color: var(--albastru-profund); }
+.poster-a1 .dest-card .sub { font-size: 6px; color: #666; }
+.poster-a1 .cta { background: var(--galben-vibrant); padding: 6px 10px; border-radius: 4px; text-align: center; }
+.poster-a1 .cta span { font-family: var(--font-titlu); font-size: 8px; font-weight: 800; color: var(--albastru-profund); }
+.uniform-mockup { display: flex; gap: 16px; align-items: flex-start; }
+.shirt { width: 90px; flex-shrink: 0; }
+.shirt-body {
+  background: var(--albastru-profund); border-radius: 4px 4px 0 0;
+  padding: 12px 10px 20px; position: relative; text-align: center;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.shirt-collar { width: 28px; height: 12px; background: var(--alb); margin: 0 auto 6px; border-radius: 0 0 50% 50%; }
+.shirt-body img { height: 14px; }
+.shirt-badge {
+  background: var(--galben-vibrant); color: var(--albastru-profund);
+  font-family: var(--font-titlu); font-size: 6px; font-weight: 800;
+  padding: 2px 5px; border-radius: 2px; display: inline-block; margin-top: 4px;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.car-mockup {
+  background: #f0f3f7; border-radius: 8px; padding: 12px;
+  border: 1px solid #e5e7eb; text-align: center;
+}
+.car-body { background: var(--albastru-profund); border-radius: 30px 30px 10px 10px; height: 60px; margin: 0 auto; width: 180px; position: relative; display: flex; align-items: center; justify-content: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.car-body img { height: 18px; filter: brightness(0) invert(1); }
+.car-windows { width: 160px; margin: 0 auto; height: 10px; background: #aad4ee; border-radius: 2px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.car-wheels { display: flex; justify-content: space-around; width: 170px; margin: 4px auto 0; }
+.car-wheel { width: 28px; height: 12px; background: #333; border-radius: 50%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ecuson {
+  width: 120px; border-radius: 8px; overflow: hidden; border: 1px solid #d0d5dd;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1); margin: 0 auto;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.ecuson-top { background: var(--albastru-profund); padding: 8px 10px; text-align: center; }
+.ecuson-top img { height: 18px; }
+.ecuson-body { background: var(--alb); padding: 8px 10px; }
+.ecuson-photo { width: 30px; height: 30px; border-radius: 50%; background: var(--gri-deschis); border: 2px solid var(--albastru-profund); margin: 0 auto 5px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ecuson-name { font-family: var(--font-titlu); font-size: 9px; font-weight: 700; color: var(--albastru-profund); text-align: center; }
+.ecuson-role { font-size: 7.5px; color: #666; text-align: center; margin-top: 1px; }
+.ecuson-code { font-family: monospace; font-size: 7px; color: #aaa; text-align: center; margin-top: 4px; letter-spacing: .1em; }
+
+/* DOC MOCKUPS EXTRA */
+.voucher-mockup {
+  background: var(--albastru-profund); border-radius: 10px; padding: 20px 22px;
+  color: white; position: relative; overflow: hidden;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.voucher-mockup::before {
+  content: ''; position: absolute; top: -30px; right: -30px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,199,44,.12);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.voucher-mockup .v-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.voucher-mockup .v-title { font-family: var(--font-titlu); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .2em; color: var(--galben-vibrant); }
+.voucher-mockup .v-code { font-family: monospace; font-size: 9px; color: rgba(255,255,255,.6); }
+.voucher-mockup .v-amount { font-family: var(--font-titlu); font-size: 28px; font-weight: 900; color: var(--galben-vibrant); line-height: 1; margin: 6px 0; }
+.voucher-mockup .v-row { display: flex; gap: 16px; margin-top: 10px; }
+.voucher-mockup .v-field label { font-size: 7px; text-transform: uppercase; letter-spacing: .2em; color: rgba(255,255,255,.5); font-family: var(--font-titlu); display: block; margin-bottom: 2px; }
+.voucher-mockup .v-field .val { font-size: 10px; color: white; }
+.voucher-qr { width: 40px; height: 40px; background: white; border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.voucher-qr svg { width: 30px; height: 30px; }
+
+.cert-mockup {
+  border: 3px solid var(--albastru-profund); border-radius: 8px; padding: 20px 24px; text-align: center;
+  background: var(--alb); position: relative;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.cert-mockup::before, .cert-mockup::after {
+  content: ''; position: absolute; width: 24px; height: 24px;
+  border: 3px solid var(--galben-vibrant);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.cert-mockup::before { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+.cert-mockup::after  { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+.cert-title { font-family: var(--font-titlu); font-size: 18px; font-weight: 900; color: var(--albastru-profund); letter-spacing: .05em; margin: 8px 0 4px; }
+.cert-sub { font-size: 9px; text-transform: uppercase; letter-spacing: .25em; color: var(--galben-vibrant); font-family: var(--font-titlu); }
+.cert-body-line { border-bottom: 1px solid var(--albastru-profund); margin: 10px auto 2px; width: 70%; }
+.cert-name-area { font-family: var(--font-premium); font-size: 14px; font-style: italic; color: var(--albastru-profund); padding: 4px 0; }
+.cert-sig { display: flex; justify-content: center; gap: 40px; margin-top: 14px; }
+.cert-sig .sig-line { text-align: center; }
+.cert-sig .sig-line .line { border-bottom: 1px solid #333; width: 80px; margin: 0 auto 3px; }
+.cert-sig .sig-line .label { font-size: 8px; color: #666; font-family: var(--font-titlu); text-transform: uppercase; letter-spacing: .1em; }
+
+.plic-mockup {
+  background: white; border: 1px solid #d0d5dd; border-radius: 4px; padding: 14px 16px;
+  position: relative; box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.plic-mockup .flap {
+  position: absolute; top: 0; left: 0; right: 0; height: 0;
+  border-left: 115mm solid transparent; border-right: 115mm solid transparent;
+  border-top: 30px solid #e8ecf0;
+}
+.plic-sender { margin-top: 10px; }
+.plic-sender img { height: 22px; margin-bottom: 3px; }
+.plic-sender address { font-size: 8px; color: #888; font-style: normal; line-height: 1.5; font-family: var(--font-text); }
+.plic-window { border: 1px solid #d0d5dd; border-radius: 2px; width: 80mm; margin: 6px auto 0 auto; padding: 8px 10px; background: #fafafa; }
+.plic-window address { font-size: 9px; color: var(--gri-text); font-style: normal; line-height: 1.6; }
+
+.biz-card { border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
+.biz-front { background: var(--alb); border: 1px solid #e5e7eb; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 90px; }
+.biz-back { background: var(--albastru-profund); padding: 14px 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 90px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.biz-back img { height: 24px; filter: brightness(0) invert(1); margin-bottom: 6px; }
+.biz-back .slogan { font-family: var(--font-premium); font-size: 8.5px; font-style: italic; color: rgba(255,255,255,.75); text-align: center; }
+
+.email-sig {
+  border: 1px solid #e5e7eb; border-radius: 6px; padding: 12px 16px;
+  background: var(--alb); font-size: 10px;
+  border-left: 3px solid var(--albastru-profund);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.email-sig .sig-name { font-family: var(--font-titlu); font-size: 13px; font-weight: 700; color: var(--albastru-profund); }
+.email-sig .sig-title { color: #666; font-size: 10px; margin-bottom: 6px; }
+.email-sig .sig-contact { font-size: 9.5px; color: var(--gri-text); line-height: 1.7; }
+.email-sig .sig-contact a { color: var(--albastru-profund); text-decoration: none; }
+.email-sig .sig-divider { border: none; border-top: 1px solid #e5e7eb; margin: 8px 0; }
+.email-sig .sig-disclaimer { font-size: 8px; color: #aaa; font-style: italic; line-height: 1.4; }
+.email-sig .sig-socials { display: flex; gap: 6px; margin-top: 6px; }
+.email-sig .sig-social-icon { width: 18px; height: 18px; border-radius: 4px; background: var(--albastru-profund); display: flex; align-items: center; justify-content: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.ppt-slide {
+  border-radius: 6px; overflow: hidden; border: 1px solid #d0d5dd;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.ppt-slide .slide-title-page {
+  background: var(--albastru-profund); padding: 24px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 140px;
+}
+.ppt-slide .slide-content-page {
+  background: var(--alb); padding: 16px;
+}
+.ppt-slide .slide-header { background: var(--albastru-profund); padding: 8px 16px; display: flex; align-items: center; gap: 10px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ppt-slide .slide-header img { height: 16px; filter: brightness(0) invert(1); }
+.ppt-slide .slide-header .slide-title-text { font-family: var(--font-titlu); font-size: 11px; font-weight: 700; color: white; }
+
+.memo-mockup {
+  border: 1px solid #d0d5dd; border-radius: 6px; background: var(--alb);
+  padding: 16px 20px; box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+.memo-mockup .memo-header { background: var(--gri-deschis); padding: 10px 14px; border-radius: 4px; margin-bottom: 12px; border-left: 3px solid var(--albastru-profund); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.memo-mockup .memo-header h4 { margin: 0 0 8px; font-size: 11px; color: var(--albastru-profund); }
+.memo-row { display: flex; gap: 10px; margin-bottom: 5px; font-size: 10px; }
+.memo-row .lbl { min-width: 70px; font-family: var(--font-titlu); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #888; }
+
+.kit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.kit-item { background: var(--gri-deschis); border-radius: 8px; padding: 12px; border-top: 3px solid var(--albastru-profund); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.kit-item h4 { margin: 0 0 6px; font-size: 10px; }
+.kit-item ul { margin: 0; padding-left: 14px; }
+.kit-item li { font-size: 10px; }
+.ref-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; }
+.ref-card .country { font-family: var(--font-titlu); font-size: 12px; font-weight: 700; color: var(--albastru-profund); margin-bottom: 4px; }
+.ref-card .brand-name { font-size: 10px; color: #666; margin-bottom: 6px; }
+.flag-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     CAPITOL 7 — CLĂDIRI & SPAȚII AGENȚII TURISM
+     ====================================================== -->
+
+<!-- P1: TITLU CAPITOL 7 -->
+<section class="page dark-blue">
+  <div style="display:flex; align-items:center; height:100%; flex-direction:column; justify-content:center; text-align:center;">
+    <span class="eyebrow" style="color:var(--galben-vibrant);">Brand Book România · Identitate Vizuală</span>
+    <div style="font-family:var(--font-titlu); font-size:80px; font-weight:900; color:var(--galben-vibrant); line-height:1; margin:12px 0;">07</div>
+    <h1 style="color:white; font-size:38px; margin:0 0 10px;">Clădiri &amp; Spații Fizice</h1>
+    <p style="font-family:var(--font-premium); font-size:16px; font-style:italic; color:rgba(255,255,255,.7); max-width:52ch; margin:0 auto 24px;">Agenții de turism · Identitate în mediul construit</p>
+    <div class="tricolor" style="width:120px; margin:0 auto;"></div>
+    <p style="color:rgba(255,255,255,.55); font-size:11.5px; max-width:56ch; margin:24px auto 0; line-height:1.7;">
+      Identitatea vizuală a României nu se oprește la ecran sau hârtie. Fiecare agenție de turism care poartă brandul național devine un punct de contact fizic cu potențialul vizitator. Coerența în spațiul fizic — de la fațadă până la biroul consultantului — construiește încredere și recunoaștere instantanee.
+    </p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7</span></div>
+</section>
+
+<!-- P2: PRINCIPII DESIGN SPAȚII FIZICE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.1</div>
+    <div class="title">
+      <span class="eyebrow">Capitol 7 · Fundamente</span>
+      <h2>Principii de Design pentru Spații Fizice</h2>
+    </div>
+  </div>
+  <p class="lead">Aplicarea identității vizuale în mediul fizic urmează patru principii fundamentale care garantează coerența brandul indiferent de locația agenției.</p>
+  <div class="tricolor"></div>
+
+  <div class="grid-2" style="margin-top:18px; gap:14px;">
+    <div class="card card-accent albastru">
+      <h3>Coerență Vizuală</h3>
+      <p>Același vocabular vizual — culori, tipografie, logo — se aplică consistent pe toate suprafețele: fațadă, vitrină, interior, mobilier și materiale tipărite. Nici o improvizație cromatică sau tipografică nu este permisă.</p>
+      <p style="font-size:10.5px; color:#666; margin:0;">Indicator cheie: un vizitator care intră în orice agenție autorizată recunoaște imediat brandul România.</p>
+    </div>
+    <div class="card card-accent galben">
+      <h3>Vizibilitate &amp; Lizibilitate</h3>
+      <p>Logo-ul și elementele de identificare trebuie să fie vizibile de la minim 15m distanță în condiții normale de iluminare. Signage-ul exterior respectă dimensiunile minime impuse (logo ≥ 40 cm lățime).</p>
+      <p style="font-size:10.5px; color:#666; margin:0;">Test: fotografie de pe trotuarul opus. Logo-ul trebuie să fie lizibil fără zoom.</p>
+    </div>
+    <div class="card card-accent verde">
+      <h3>Accesibilitate</h3>
+      <p>Intrarea agenției este marcată clar, fără ambiguitate. Contrastul cromatică minim WCAG AA (4.5:1) pentru toate textele vizibile din exterior. Indicatoarele respectă înălțimile de citire pentru persoane cu dizabilități.</p>
+      <p style="font-size:10.5px; color:#666; margin:0;">Standard: ISO 7001 pentru pictograme de informare publică.</p>
+    </div>
+    <div class="card card-accent deschis">
+      <h3>Brand Consistency</h3>
+      <p>Materialele promoționale, decorurile sezoniere și campaniile temporare nu contravin identității de bază. Adăugările temporare (bannere, afișe) respectă paleta de culori și sunt înlăturate la finalul campaniei.</p>
+      <p style="font-size:10.5px; color:#666; margin:0;">Principiu: temporarul nu anulează permanentul.</p>
+    </div>
+  </div>
+
+  <div class="band galben" style="margin-top:20px;">
+    <p><strong>Autorizare agenție:</strong> Folosirea brandului România în spațiu fizic este condiționată de acordul scris al Ministerului Turismului și respectarea prezentului ghid. Nerespectarea regulilor atrage retragerea dreptului de utilizare a identității naționale.</p>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Principii</span></div>
+</section>
+
+<!-- P3: EXTERIOR FAȚADĂ -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.2</div>
+    <div class="title">
+      <span class="eyebrow">Exterior</span>
+      <h2>Fațada Agenției — Identitate la Stradă</h2>
+    </div>
+  </div>
+
+  <div class="building" style="margin-bottom:14px;">
+    <div style="width:100%; height:240px; border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/agency-exterior-day.png"
+           style="width:100%; height:100%; object-fit:cover; display:block;"
+           alt="Fațadă agenție turism">
+    </div>
+    <div class="caption">Fig. 7.1 — Fațadă tip agenție de turism · Albastru profund dominant, signage galben iluminat</div>
+  </div>
+
+  <div class="grid-2" style="gap:12px;">
+    <div>
+      <h3 style="font-size:14px; margin-bottom:8px;">Culori fațadă</h3>
+      <div style="display:flex; flex-direction:column; gap:5px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="width:32px; height:20px; background:#0B3C5D; border-radius:3px; flex-shrink:0;" class="ph-albastru"></div>
+          <div style="font-size:10.5px;"><strong>Albastru profund #0B3C5D</strong> — element dominant (min. 60% suprafață)</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="width:32px; height:20px; background:#FFC72C; border-radius:3px; flex-shrink:0;"></div>
+          <div style="font-size:10.5px;"><strong>Galben vibrant #FFC72C</strong> — signage, litere iluminate</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div style="width:32px; height:20px; background:white; border:1px solid #e5e7eb; border-radius:3px; flex-shrink:0;"></div>
+          <div style="font-size:10.5px;"><strong>Alb #FFFFFF</strong> — suprafețe secundare, geamuri</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:14px; margin-bottom:8px;">Materiale recomandate</h3>
+      <ul style="font-size:11px; margin:0; padding-left:16px; line-height:1.8;">
+        <li>Aluminiu compozit (Dibond) — panouri fațadă</li>
+        <li>Sticlă securizată — vitrină frontală</li>
+        <li>Litere volumetrice din acril — signage iluminat</li>
+        <li>LED backlit — iluminare nocturnă continuă</li>
+        <li>Film adeziv premium — aplicare geamuri</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Exterior</span></div>
+</section>
+
+<!-- P4: REGULI FAȚADĂ -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.3</div>
+    <div class="title">
+      <span class="eyebrow">Specificații Tehnice</span>
+      <h2>Reguli Obligatorii de Fațadă</h2>
+    </div>
+  </div>
+
+  <table class="spec-table" style="margin-bottom:16px;">
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Specificație minimă</th>
+        <th>Standard recomandat</th>
+        <th>Observații</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Logo orizontal</strong></td>
+        <td>Lățime min. 40 cm</td>
+        <td>60–80 cm</td>
+        <td>Vizibil de la 15m distanță</td>
+      </tr>
+      <tr>
+        <td><strong>Text agenție</strong></td>
+        <td>Montserrat Bold, 8 cm înălțime literă</td>
+        <td>10–14 cm</td>
+        <td>Litere volumetrice sau backlit</td>
+      </tr>
+      <tr>
+        <td><strong>Fond fațadă</strong></td>
+        <td>#0B3C5D min. 60% suprafață</td>
+        <td>70–80%</td>
+        <td>Vopsea sau panel aluminiu</td>
+      </tr>
+      <tr>
+        <td><strong>Iluminare nocturnă</strong></td>
+        <td>LED 4000K–5000K backlit</td>
+        <td>LED RGBW dimabil</td>
+        <td>Funcționare 18:00–24:00</td>
+      </tr>
+      <tr>
+        <td><strong>Stemă / drapel</strong></td>
+        <td>Tricolor 30×20 cm la intrare</td>
+        <td>50×35 cm, fanion</td>
+        <td>Protocol drapel românesc respectat</td>
+      </tr>
+      <tr>
+        <td><strong>Număr agenție</strong></td>
+        <td>Cod licență vizibil 3 cm</td>
+        <td>5 cm, Montserrat</td>
+        <td>Obligatoriu conform legii</td>
+      </tr>
+      <tr>
+        <td><strong>Program orar</strong></td>
+        <td>Vizibil la intrare, min. 12px</td>
+        <td>Vinyl cut, font Montserrat</td>
+        <td>Fundal alb sau galben</td>
+      </tr>
+      <tr>
+        <td><strong>Distanță față-logo</strong></td>
+        <td>Zonă liberă min. 1× H logo</td>
+        <td>1.5× H logo</td>
+        <td>Niciun element extern în zonă</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="band rosu">
+    <p><strong>Interzis pe fațadă:</strong> Logo modificat (proporții, culori, filtre), text fontul altul decat Montserrat în signage principal, reclame terțe în câmpul de protecție al logo-ului, fundal colorat altul decât culorile brand.</p>
+  </div>
+
+  <div class="band verde" style="margin-top:10px;">
+    <p><strong>Permis condiționat:</strong> Adăugarea numelui comercial al agenției sub logo (Montserrat Regular, 60% dimensiunea logo-ului), cu separare vizuală clară (linie subțire galbenă).</p>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Specificații Fațadă</span></div>
+</section>
+
+<!-- P5: VITRINA AGENȚIEI -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.4</div>
+    <div class="title">
+      <span class="eyebrow">Exterior · Vitrină</span>
+      <h2>Vitrina Agenției — Zona de Expunere</h2>
+    </div>
+  </div>
+
+  <div class="building" style="margin-bottom:14px;">
+    <div style="width:100%; height:210px; border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/agency-window.png"
+           style="width:100%; height:100%; object-fit:cover; display:block;"
+           alt="Vitrină agenție turism">
+    </div>
+    <div class="caption">Fig. 7.2 — Vitrină agenție turism · Iluminare serală, expunere destinații</div>
+  </div>
+
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px;">Structura vitrinei</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li><strong>Zona sus (20%):</strong> Logo orizontal centrat, pe fundal albastru profund, aplicat pe film adeziv. Iluminat LED intern.</li>
+        <li><strong>Zona centrală (60%):</strong> Materiale promoționale — afișe destinații, oferte, postere sezoniere. Max. 3 postere simultane.</li>
+        <li><strong>Zona jos (20%):</strong> Program, contact, cod licență. Font Montserrat, culori brand.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:13px;">Reguli aplicare</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Logo aplicat pe film adeziv alb mat sau direct backlit</li>
+        <li>Materialele promoționale nu acoperă logo-ul niciodată</li>
+        <li>Fondul vitrinei: alb sau albastru profund — fără alte culori</li>
+        <li>Postere tipărite minim 150 dpi, format A2 sau mai mare</li>
+        <li>Schimbare conținut maxim o dată pe lună (stabilitate vizuală)</li>
+        <li>Nu se lipesc afișe direct pe geam fără suport/cadru</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Vitrină</span></div>
+</section>
+
+<!-- P6: SISTEM SEMNALIZARE EXTERIOR -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.5</div>
+    <div class="title">
+      <span class="eyebrow">Exterior · Wayfinding</span>
+      <h2>Sistemul de Semnalizare Exterior</h2>
+    </div>
+  </div>
+
+  <div class="building" style="margin-bottom:14px;">
+    <div style="width:100%; height:190px; border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/agency-signage.png"
+           style="width:100%; height:100%; object-fit:cover; display:block;"
+           alt="Sistem signage agenție turism">
+    </div>
+    <div class="caption">Fig. 7.3 — Sistem semnalizare exterior · Wayfinding, indicatoare direcționale</div>
+  </div>
+
+  <div class="grid-2" style="gap:14px; margin-top:6px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Tipuri de indicatoare</h3>
+      <table class="spec-table" style="font-size:10px;">
+        <thead><tr><th>Tip</th><th>Dimensiune</th><th>Material</th></tr></thead>
+        <tbody>
+          <tr><td>Indicator intrare</td><td>60×20 cm</td><td>Aluminiu anodizat</td></tr>
+          <tr><td>Indicator direcțional</td><td>80×15 cm</td><td>Aluminiu + vinyl</td></tr>
+          <tr><td>Panou informații</td><td>40×60 cm</td><td>Aluminiu + plexiglas</td></tr>
+          <tr><td>Sticker geam</td><td>A4 — 30×21 cm</td><td>Vinyl alb mat</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații vizuale</h3>
+      <ul style="font-size:11px; line-height:1.8; margin:0; padding-left:16px;">
+        <li>Fond: albastru profund #0B3C5D</li>
+        <li>Text: alb #FFFFFF, Montserrat Bold</li>
+        <li>Accente: galben #FFC72C pentru săgeți</li>
+        <li>Pictograme: albe, stil ISO 7001</li>
+        <li>Bordură: galben 2mm pe indicatoare primare</li>
+        <li>Instalare: la 1.8m față de sol (centru panou)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="band gri" style="margin-top:12px;">
+    <p><strong>Notă autorități locale:</strong> Toate indicatoarele exterioare necesită aviz de la primăria locală. Solicitarea se face cu documentație tehnică conform acestui ghid. Forma și culoarea sunt fixe; dimensiunile pot fi adaptate cu aprobarea Ministerului Turismului.</p>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Wayfinding</span></div>
+</section>
+
+<!-- P7: INTERIOR RECEPȚIE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.6</div>
+    <div class="title">
+      <span class="eyebrow">Interior · Recepție</span>
+      <h2>Zona de Recepție și Primire Clienți</h2>
+    </div>
+  </div>
+
+  <div class="building" style="margin-bottom:14px;">
+    <div style="width:100%; height:210px; border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/agency-interior.png"
+           style="width:100%; height:100%; object-fit:cover; display:block;"
+           alt="Interior agenție turism">
+    </div>
+    <div class="caption">Fig. 7.4 — Interior agenție · Recepție, zonă consultanți, branding perete</div>
+  </div>
+
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px;">Principii design interior</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Deschidere și transparență — spațiu liber, fără bariere vizuale</li>
+        <li>Logo dominant pe peretele frontal (min. 80cm lățime)</li>
+        <li>Culorile brandului prezente, dar nu copleșitoare (accent, nu dominant)</li>
+        <li>Iluminare naturală maximizată — role-uri albe/transparente</li>
+        <li>Plante naturale pentru atmosferă — nu artificiale</li>
+        <li>Ordine vizuală — fără materiale risipite pe suprafețe</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:13px;">Peretele brand (focal wall)</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Fundal albastru profund sau alb</li>
+        <li>Logo centrat, backlit sau vinil mat</li>
+        <li>Slogan sub logo: Montserrat Light Italic, alb/gri</li>
+        <li>Tricolorul decorativ — bandă 4px la baza peretelui</li>
+        <li>Fotografii destinații: printate canvas, tonuri calde</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Interior Recepție</span></div>
+</section>
+
+<!-- P8: SPECIFICAȚII INTERIOR -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.7</div>
+    <div class="title">
+      <span class="eyebrow">Specificații Tehnice Interior</span>
+      <h2>Materiale, Culori și Iluminare</h2>
+    </div>
+  </div>
+
+  <table class="spec-table" style="margin-bottom:16px;">
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Specificație</th>
+        <th>Cod culoare / Standard</th>
+        <th>Notă</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Pereți principali</strong></td>
+        <td>Alb cald mat</td>
+        <td>#FAFAFA sau RAL 9010</td>
+        <td>Fond neutru pentru brand</td>
+      </tr>
+      <tr>
+        <td><strong>Perete accent (focal)</strong></td>
+        <td>Albastru profund</td>
+        <td>#0B3C5D sau RAL 5003</td>
+        <td>Peretele din față recepției</td>
+      </tr>
+      <tr>
+        <td><strong>Podea</strong></td>
+        <td>Gri deschis sau bej cald</td>
+        <td>RAL 7035 / RAL 1015</td>
+        <td>Gresie sau parchet laminat</td>
+      </tr>
+      <tr>
+        <td><strong>Mobilier desk</strong></td>
+        <td>Alb cu detalii albastre</td>
+        <td>RAL 9010 + #0B3C5D insert</td>
+        <td>MDF lăcuit mat</td>
+      </tr>
+      <tr>
+        <td><strong>Scaune clienți</strong></td>
+        <td>Albastru profund sau gri antracit</td>
+        <td>#0B3C5D sau RAL 7016</td>
+        <td>Textil sau imitație piele</td>
+      </tr>
+      <tr>
+        <td><strong>Iluminare generală</strong></td>
+        <td>LED 3000K warm white</td>
+        <td>CRI ≥ 90, 400–500 lux</td>
+        <td>Atmosferă caldă, prietenoasă</td>
+      </tr>
+      <tr>
+        <td><strong>Iluminare accent</strong></td>
+        <td>LED spot 2700K</td>
+        <td>Direcționabil, 500–800 lux</td>
+        <td>Pe peretele focal și exponate</td>
+      </tr>
+      <tr>
+        <td><strong>Tavan</strong></td>
+        <td>Alb mat, fals tavan gips</td>
+        <td>#FFFFFF</td>
+        <td>Înălțime liberă min. 2.7m</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="gap:14px;">
+    <div class="band albastru">
+      <p style="font-weight:700; font-size:11px; color:var(--galben-vibrant); margin-bottom:6px;">TEMPERATURA CULORII</p>
+      <p style="font-size:11px;">3000K–3500K în zona de așteptare și consultanță. 4000K la desk-ul de recepție (claritate documente). Evitați 6500K daylight — aspect steril, nepotrivit brandului.</p>
+    </div>
+    <div class="band galben">
+      <p style="font-weight:700; font-size:11px; margin-bottom:6px;">CALITATEA AERULUI</p>
+      <p style="font-size:11px;">Plante naturale recomandate: ficus, pothos, sansevieria. Eliminatoare de umiditate excesivă. Parfum ambiental discret, natural (nu spray). Temperatura 20–22°C tot timpul programului.</p>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Specificații Interior</span></div>
+</section>
+
+<!-- P9: ZONA DE AȘTEPTARE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.8</div>
+    <div class="title">
+      <span class="eyebrow">Interior · Lounge</span>
+      <h2>Zona de Așteptare — Experiența Clientului</h2>
+    </div>
+  </div>
+
+  <p class="lead">Zona de așteptare este primul contact fizic al clientului cu brandul. Fiecare minut petrecut acolo construiește sau erodează relația cu România.</p>
+  <div class="tricolor"></div>
+
+  <div class="grid-2" style="margin-top:16px; gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Mobilier &amp; Amenajare</h3>
+      <ul style="font-size:11px; line-height:1.9;">
+        <li><strong>Scaune/canapea:</strong> min. 4 locuri, albastru profund sau gri, design contemporan</li>
+        <li><strong>Masă de reviste:</strong> design curat, materiale brand (broșuri oficiale, ghiduri)</li>
+        <li><strong>Display vertical:</strong> ecran 43"+ cu conținut video destinații România (loop continuu)</li>
+        <li><strong>Rafturi broșuri:</strong> organizate pe regiuni, etichetate în Montserrat Bold</li>
+        <li><strong>Plante naturale:</strong> minim 2, în ghivece albe sau albastre închise</li>
+        <li><strong>Stație WI-FI:</strong> parolă afișată discret pe carton brand</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Materiale disponibile clientului</h3>
+      <div style="display:flex; flex-direction:column; gap:7px;">
+        <div class="subgroup">
+          <span class="label">Broșuri tipărite</span>
+          <p>Ghiduri regionale (8 regiuni), broșuri tematice (schi, balneo, cultural), oferte curente. Toate cu antet standard de brand.</p>
+        </div>
+        <div class="subgroup">
+          <span class="label">Ecran digital</span>
+          <p>Conținut video 4K — peisaje, orașe, festivaluri. Fișiere furnizate de Ministerul Turismului. Actualizare trimestrială.</p>
+        </div>
+        <div class="subgroup">
+          <span class="label">Apă/cafea</span>
+          <p>Opțional dar recomandat. Pahare/cești branduite sau neutre. Niciodată pahare cu logo extern.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band verde" style="margin-top:14px;">
+    <p><strong>Standard experiență:</strong> Clientul nu trebuie să aștepte mai mult de 5 minute fără contact vizual cu un consultant. Dacă toți consultanții sunt ocupați, recepționerul oferă apă și estimare timp.</p>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Zonă Așteptare</span></div>
+</section>
+
+
+<!-- P10: BIROURI INDIVIDUALE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.9</div>
+    <div class="title">
+      <span class="eyebrow">Interior · Consultanți</span>
+      <h2>Birouri Individuale — Standardul Consultantului</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Suprafața de lucru</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li><strong>Fond de ecran:</strong> wallpaper oficial — peisaj România în tonuri albastre, cu logo colț dreapta-jos. Fișier furnizat de brand management.</li>
+        <li><strong>Organizator documente:</strong> din acril transparent sau albastru, etichetat Montserrat Bold</li>
+        <li><strong>Suport carte de vizită:</strong> vizibil pentru client, minim 10 cărți disponibile</li>
+        <li><strong>Tampon/ștampilă:</strong> cu antet oficial al agenției</li>
+        <li><strong>Pixuri:</strong> albastre sau negre, fără logo extern vizibil</li>
+        <li><strong>Bloc notes:</strong> cu antet brand, nu caiete generice</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Uniforma consultantului</h3>
+      <div class="uniform-mockup">
+        <div class="shirt">
+          <div class="shirt-body" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+            <div class="shirt-collar"></div>
+            <img src="../clean/05-doar-simbol.png" alt="logo" style="filter:brightness(0) invert(1); height:14px;">
+            <div class="shirt-badge">TURISM RO</div>
+          </div>
+          <div style="background:#e5e7eb; height:8px; border-radius:0 0 4px 4px;"></div>
+        </div>
+        <div style="font-size:10.5px; line-height:1.7;">
+          <p style="margin:0 0 6px;"><strong>Variantă 1 (formală):</strong> Cămașă albastru profund #0B3C5D cu broderie logo pe piept stânga. Pantalon negru sau bleumarin.</p>
+          <p style="margin:0 0 6px;"><strong>Variantă 2 (smart casual):</strong> Polo alb cu broderie logo. Cardigan albastru profund.</p>
+          <p style="margin:0;"><strong>Ecuson obligatoriu:</strong> Nume, funcție, cod angajat. Agățat pe piept drept.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band gri" style="margin-top:14px;">
+    <p><strong>Documente pe birou:</strong> Consultantul păstrează pe suprafața de lucru doar materialele necesare consultației curente. Dosarele, cataloagele și documentele personale se depozitează în sertare sau dulapuri dedicate. Biroul curat = brand curat.</p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Birouri Consultanți</span></div>
+</section>
+
+<!-- P11: STANDURI EXPOZIȚIONALE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.10</div>
+    <div class="title">
+      <span class="eyebrow">Expoziții &amp; Târguri</span>
+      <h2>Standuri Expoziționale — Prezență la Târguri</h2>
+    </div>
+  </div>
+  <div class="building" style="margin-bottom:14px;">
+    <div style="width:100%; height:200px; border-radius:8px; overflow:hidden;">
+      <img src="../photos/mockups/agency-stand-expo.png"
+           style="width:100%; height:100%; object-fit:cover; display:block;"
+           alt="Stand expozițional agenție turism">
+    </div>
+    <div class="caption">Fig. 7.5 — Standuri expoziționale · Configurații 3×3m și 6×3m</div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Stand mic 3×3m</h3>
+      <ul style="font-size:11px; line-height:1.7;">
+        <li>Perete fundal: albastru profund cu logo centrat (80cm lățime)</li>
+        <li>2 roll-up-uri laterale (85×200cm)</li>
+        <li>Tejghea recepție branded (alb + insert albastru)</li>
+        <li>2 scaune consultanți, 2 scaune vizitatori</li>
+        <li>Display broșuri A4 și A5</li>
+        <li>Ecran 32" — conținut video destinații</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Stand mare 6×3m</h3>
+      <ul style="font-size:11px; line-height:1.7;">
+        <li>Sistem modular panouri tensionate backlit</li>
+        <li>Zona consultanță (3m) + zona experiență (3m)</li>
+        <li>Video wall 2×2 ecrane 55" — proiecție peisaje 4K</li>
+        <li>Totem LED cu logo și slogan</li>
+        <li>Materiale promoționale: ghiduri, hărți, suveniruri</li>
+        <li>Podea: vinil brand cu logo central (opțional)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Standuri Expoziționale</span></div>
+</section>
+
+<!-- P12: ROLL-UP-URI -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.11</div>
+    <div class="title">
+      <span class="eyebrow">Materiale Promoționale</span>
+      <h2>Roll-up — Specificații &amp; Design</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start; margin-bottom:16px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:12px;">Mockup roll-up 85×200cm</h3>
+      <div class="rollup-mockup" style="width:130px;">
+        <div class="rollup-top">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="filter:brightness(0) invert(1);">
+          <div class="tagline">Unde tradiția întâlnește viitorul</div>
+        </div>
+        <div class="rollup-body">
+          <div class="rollup-img"></div>
+          <div class="destination">TRANSILVANIA</div>
+          <div class="desc">Castele medievale, peisaje montane și gastronomie autentică vă așteaptă în inima României.</div>
+          <div class="rollup-img" style="background:linear-gradient(135deg,#2E7D32,#1a4d1a); height:35px; margin-bottom:5px;"></div>
+          <div class="destination">DELTA DUNĂRII</div>
+          <div class="desc">Cel mai mare complex de zone umede din Europa. Biodiversitate unică mondială.</div>
+        </div>
+        <div class="rollup-bottom">
+          <span>www.romania.travel · 0800 123 456</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații tehnice</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Parametru</th><th>Valoare</th></tr></thead>
+        <tbody>
+          <tr><td>Format standard</td><td>85×200 cm</td></tr>
+          <tr><td>Format larg</td><td>100×200 cm</td></tr>
+          <tr><td>Rezoluție imprimare</td><td>min. 150 dpi la dimensiune finală</td></tr>
+          <tr><td>Profil culoare</td><td>CMYK · Coated paper</td></tr>
+          <tr><td>Bleed</td><td>3mm pe toate laturile</td></tr>
+          <tr><td>Zonă securitate text</td><td>20mm de la margini</td></tr>
+          <tr><td>Material banner</td><td>Polyester 140g/m² sau PVC</td></tr>
+          <tr><td>Mecanism</td><td>Casetă aluminiu cu opritor</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Zona logo:</strong> Minim 20% din înălțimea totală. Logo orizontal pe fundal albastru profund în zona superioară. Niciodată logo pe fundal colorat aleatoriu.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Roll-up</span></div>
+</section>
+
+<!-- P13: PANOU A1 -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.12</div>
+    <div class="title">
+      <span class="eyebrow">Interior · Expunere</span>
+      <h2>Panou de Prezentare Interior A1</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Mockup poster A1 (594×841mm)</h3>
+      <div class="poster-a1">
+        <div class="top-bar">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="filter:brightness(0) invert(1);">
+          <div style="font-family:var(--font-titlu); font-size:7px; color:var(--galben-vibrant); text-align:right; font-weight:700;">AGENȚIE ACREDITATĂ<br><span style="font-weight:400; color:rgba(255,255,255,.6);">Licența MT #0042</span></div>
+        </div>
+        <div class="hero">
+          <div class="hero-text">DESCOPERĂ ROMÂNIA
+            <span class="sub-text">Unde tradiția întâlnește viitorul</span>
+          </div>
+        </div>
+        <div style="font-family:var(--font-titlu); font-size:9px; font-weight:700; color:var(--albastru-profund); margin:8px 0 5px; text-transform:uppercase; letter-spacing:.12em;">Destinații recomandate</div>
+        <div class="destinations">
+          <div class="dest-card"><div class="name">TRANSILVANIA</div><div class="sub">Castele &amp; munți</div></div>
+          <div class="dest-card"><div class="name">MARAMUREȘ</div><div class="sub">Tradiție vie</div></div>
+          <div class="dest-card"><div class="name">DELTA DUNĂRII</div><div class="sub">Natură unică</div></div>
+          <div class="dest-card"><div class="name">DOBROGEA</div><div class="sub">Litoral &amp; pontică</div></div>
+          <div class="dest-card"><div class="name">MOLDOVA</div><div class="sub">Mănăstiri &amp; vin</div></div>
+          <div class="dest-card"><div class="name">OLTENIA</div><div class="sub">Gorje &amp; Mehedinți</div></div>
+        </div>
+        <div class="cta"><span>Consultare gratuită · 0800 123 456 · www.romania.travel</span></div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații panou A1</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format</td><td>594×841mm (A1 portret)</td></tr>
+          <tr><td>Imprimare</td><td>Offset sau digital UV</td></tr>
+          <tr><td>Suport</td><td>Sintra 5mm sau PVC expandat</td></tr>
+          <tr><td>Laminare</td><td>Lucioasă sau mată anti-reflex</td></tr>
+          <tr><td>Logo zonă</td><td>Min. 20% din lățime (118mm)</td></tr>
+          <tr><td>Margini securitate</td><td>15mm de la tăietură</td></tr>
+          <tr><td>Rezoluție</td><td>150 dpi la 100% dimensiune</td></tr>
+          <tr><td>Montaj</td><td>Suport metalic reglabil sau perete</td></tr>
+        </tbody>
+      </table>
+      <div class="band gri">
+        <p style="font-size:10.5px;"><strong>Conținut recomandat:</strong> Logo + destinații cu fotografii + contact. Nu supraîncărcați panoul — max. 6 destinații cu imagini. Fonturi: Montserrat Bold pentru titluri, Open Sans Regular pentru descrieri.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Panou A1</span></div>
+</section>
+
+<!-- P14: UNIFORMA PERSONALULUI -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.13</div>
+    <div class="title">
+      <span class="eyebrow">Identitate Personală</span>
+      <h2>Uniforma Personalului &amp; Ecusonul</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:12px;">Variante uniforme</h3>
+      <div style="display:flex; gap:16px; margin-bottom:14px;">
+        <div class="shirt" style="text-align:center;">
+          <div class="shirt-body" style="-webkit-print-color-adjust:exact; print-color-adjust:exact; border-radius:6px 6px 0 0;">
+            <div class="shirt-collar"></div>
+            <img src="../clean/05-doar-simbol.png" alt="symbol" style="filter:brightness(0) invert(1); height:16px; margin-bottom:4px;">
+            <div class="shirt-badge" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">TURISM RO</div>
+          </div>
+          <div style="background:#e8ecf0; padding:3px; border-radius:0 0 4px 4px; font-size:7px; font-family:var(--font-titlu); color:#666; text-align:center;">FORMALĂ</div>
+        </div>
+        <div class="shirt" style="text-align:center;">
+          <div style="background:white; border:2px solid var(--albastru-profund); border-radius:6px 6px 0 0; padding:12px 10px 18px; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+            <div class="shirt-collar" style="background:var(--albastru-profund);"></div>
+            <img src="../clean/05-doar-simbol.png" alt="symbol" style="height:14px; margin-bottom:4px;">
+            <div style="font-family:var(--font-titlu); font-size:5.5px; font-weight:700; color:var(--albastru-profund); letter-spacing:.1em;">TURISM RO</div>
+          </div>
+          <div style="background:#e8ecf0; padding:3px; border-radius:0 0 4px 4px; font-size:7px; font-family:var(--font-titlu); color:#666; text-align:center;">SMART CASUAL</div>
+        </div>
+      </div>
+      <div style="font-size:11px; line-height:1.7;">
+        <p><strong>Varianta formală:</strong> Cămașă albastru profund (#0B3C5D) cu broderie logo alb pe piept stâng. Pantalon negru sau bleumarin închis. Cravată/eșarfă galbenă #FFC72C opțional.</p>
+        <p style="margin:0;"><strong>Varianta smart casual:</strong> Polo alb cu broderie logo albastru. Cardigan sau sacou albastru profund. Fără tricouri imprimate termic.</p>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:12px;">Ecuson personal</h3>
+      <div style="display:flex; justify-content:center; margin-bottom:14px;">
+        <div class="ecuson">
+          <div class="ecuson-top" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+            <img src="../clean/03-logo-orizontal.png" alt="Logo" style="filter:brightness(0) invert(1);">
+          </div>
+          <div class="ecuson-body">
+            <div class="ecuson-photo" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+              <div style="width:100%; height:100%; background:var(--gri-deschis); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:8px; color:#aaa;">FOTO</div>
+            </div>
+            <div class="ecuson-name">MARIA IONESCU</div>
+            <div class="ecuson-role">Consultant Turism Senior</div>
+            <div class="ecuson-code">ID: MT-2024-0187</div>
+          </div>
+        </div>
+      </div>
+      <table class="spec-table" style="font-size:10px;">
+        <thead><tr><th>Element ecuson</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Dimensiune</td><td>85×54mm (standard card)</td></tr>
+          <tr><td>Material</td><td>PVC rigid 0.76mm sau carton plastifiat</td></tr>
+          <tr><td>Zonă sus</td><td>Albastru profund + logo alb</td></tr>
+          <tr><td>Zonă jos</td><td>Alb + foto + nume + funcție + cod</td></tr>
+          <tr><td>Foto</td><td>Fundal alb, formal, color</td></tr>
+          <tr><td>Font nume</td><td>Montserrat Bold 9px</td></tr>
+          <tr><td>Prindere</td><td>Clip metalic sau yoyo retractabil</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Uniformă &amp; Ecuson</span></div>
+</section>
+
+<!-- P15: VEHICULE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.14</div>
+    <div class="title">
+      <span class="eyebrow">Fleet &amp; Transport</span>
+      <h2>Vehiculele Agenției — Branding Auto</h2>
+    </div>
+  </div>
+  <div style="margin-bottom:16px;">
+    <h3 style="font-size:13px; margin-bottom:10px;">Mockup vehicul branded</h3>
+    <div class="car-mockup">
+      <div style="font-size:8px; color:#888; font-family:var(--font-titlu); text-transform:uppercase; letter-spacing:.15em; margin-bottom:8px;">Vedere laterală · Aplicare branding auto</div>
+      <div class="car-body" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo România">
+      </div>
+      <div class="car-windows" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+      <div class="car-wheels" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        <div class="car-wheel" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+        <div class="car-wheel" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+      </div>
+      <div style="font-size:8px; color:#888; font-family:var(--font-titlu); margin-top:8px;">Albastru profund #0B3C5D · Logo alb centrat · Număr de contact lateral</div>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații aplicare logo</h3>
+      <table class="spec-table" style="font-size:10.5px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Fond vehicul</td><td>Albastru profund #0B3C5D (folie auto)</td></tr>
+          <tr><td>Logo față portieră</td><td>Orizontal, alb, 40cm lățime min.</td></tr>
+          <tr><td>Logo capotă</td><td>Simbol (05-doar-simbol), 20cm</td></tr>
+          <tr><td>Text lateral</td><td>TURISM ROMÂNIA, Montserrat Bold alb</td></tr>
+          <tr><td>Număr contact</td><td>0800 123 456, lateral față, 6cm</td></tr>
+          <tr><td>Website</td><td>romania.travel, lateral spate, 4cm</td></tr>
+          <tr><td>Folie</td><td>Vinil auto cast 7 ani durabilitate</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Reguli branding auto</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Orice vehicul al agenției (proprietate sau închiriere lungă) se brandează obligatoriu</li>
+        <li>Vehiculele închiriate pe termen scurt nu se brandează</li>
+        <li>Folia se aplică de furnizori autorizați cu fișiere vectoriale EPS/AI originale</li>
+        <li>Vehiculul branduit se menține curat — murdăria pe logo este imagine negativă de brand</li>
+        <li>Zgârieturile pe zonele cu logo se remediază în max. 30 zile</li>
+        <li>La vânzarea vehiculului, folia de brand se îndepărtează obligatoriu</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Vehicule</span></div>
+</section>
+
+<!-- P16: MATERIALE RECEPȚIE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.15</div>
+    <div class="title">
+      <span class="eyebrow">Materiale Birou</span>
+      <h2>Materialele Recepției &amp; Biroului</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:16px; margin-bottom:16px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Organizator recepție</h3>
+      <div class="doc-mockup" style="padding:12px 14px;">
+        <div style="display:flex; gap:6px; margin-bottom:8px;">
+          <div style="background:var(--albastru-profund); color:white; padding:4px 8px; border-radius:3px; font-family:var(--font-titlu); font-size:8px; font-weight:700; -webkit-print-color-adjust:exact; print-color-adjust:exact;">FORMULARE</div>
+          <div style="background:var(--galben-vibrant); color:var(--albastru-profund); padding:4px 8px; border-radius:3px; font-family:var(--font-titlu); font-size:8px; font-weight:700; -webkit-print-color-adjust:exact; print-color-adjust:exact;">OFERTE</div>
+          <div style="background:var(--gri-deschis); color:#555; padding:4px 8px; border-radius:3px; font-family:var(--font-titlu); font-size:8px; font-weight:700;">HĂRȚI</div>
+        </div>
+        <div style="font-size:9px; color:#888;">Organizator acril transparent · 3 compartimente<br>Etichetat Montserrat Bold · Albastru profund</div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Banner stand recepție</h3>
+      <div style="background:var(--albastru-profund); border-radius:6px; padding:10px 12px; color:white; text-align:center; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:20px; filter:brightness(0) invert(1); margin-bottom:4px; display:block; margin:0 auto 4px;">
+        <div style="font-family:var(--font-titlu); font-size:7px; color:var(--galben-vibrant); font-weight:700; letter-spacing:.2em; text-transform:uppercase;">RECEPȚIE</div>
+        <div style="font-size:6.5px; color:rgba(255,255,255,.6); margin-top:2px;">Vă mulțumim că ați ales România</div>
+      </div>
+    </div>
+  </div>
+  <h3 style="font-size:13px; margin-bottom:8px;">Inventar complet materiale branded obligatorii</h3>
+  <table class="spec-table">
+    <thead>
+      <tr><th>Material</th><th>Cantitate minimă</th><th>Specificație</th><th>Furnizor</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cărți de vizită consultanți</td><td>50 buc/consultant</td><td>85×54mm, 350g plastifiat</td><td>Tipografie acreditată</td></tr>
+      <tr><td>Antet scrisori A4</td><td>100 coli/an</td><td>Preimprimat offset 100g</td><td>Tipografie acreditată</td></tr>
+      <tr><td>Plicuri DL/C5</td><td>200 buc/an</td><td>Cu logo și adresă expeditor</td><td>Tipografie acreditată</td></tr>
+      <tr><td>Dosare prezentare</td><td>50 buc/an</td><td>Copertă rigidă 300g, plastifiat mat</td><td>Tipografie acreditată</td></tr>
+      <tr><td>Bloc notes branded</td><td>5 buc/consultant</td><td>A5, spiral, 50 file, antet pe fiecare</td><td>Tipografie acreditată</td></tr>
+      <tr><td>Pixuri logo</td><td>20 buc/recepție</td><td>Metal, albastru, gravură laser</td><td>Furnizor promoționale</td></tr>
+      <tr><td>Ecusonuri personal</td><td>2 buc/angajat</td><td>PVC rigid, clip metalic</td><td>Furnizor ecusoane</td></tr>
+    </tbody>
+  </table>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Materiale Birou</span></div>
+</section>
+
+<!-- P17: CHECKLIST ACCEPTARE SPAȚIU -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.16</div>
+    <div class="title">
+      <span class="eyebrow">Audit &amp; Conformitate</span>
+      <h2>Checklist de Acceptare — Spațiu Branduit Corect</h2>
+    </div>
+  </div>
+  <p class="lead">Înainte de deschiderea oficială sau la auditurile anuale, fiecare agenție parcurge lista de verificare de mai jos. Sunt necesare toate cele 15 puncte bifate pentru obținerea certificatului de conformitate vizuală.</p>
+  <div class="tricolor"></div>
+  <div class="grid-2" style="margin-top:14px; gap:10px;">
+    <div>
+      <ul class="checklist">
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">1</span><div><strong>Logo exterior vizibil de la 15m</strong> — fotografie atașată obligatoriu</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">2</span><div><strong>Dimensiune logo min. 40cm</strong> — confirmat cu măsurătoare</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">3</span><div><strong>Culori fațadă corecte</strong> — albastru #0B3C5D verificat cu colorimetru</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">4</span><div><strong>Signage iluminat nocturn</strong> — test fotografic la 21:00</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">5</span><div><strong>Tricolor la intrare</strong> — conform protocol drapel</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">6</span><div><strong>Program și licență vizibile</strong> — la intrare, Montserrat</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">7</span><div><strong>Vitrină organizată conform ghid</strong> — max. 3 postere, logo sus</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">8</span><div><strong>Perete focal interior brand</strong> — logo min. 80cm, centrat</div></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="checklist">
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">9</span><div><strong>Culori interior corecte</strong> — pereți alb/albastru conform spec</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">10</span><div><strong>Iluminare 3000K–4000K</strong> — confirmat cu spectrometru</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">11</span><div><strong>Fond de ecran consultanți</strong> — wallpaper oficial pe toate stațiile</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">12</span><div><strong>Ecusonuri personal purtate</strong> — toți angajații în program</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">13</span><div><strong>Materiale promoționale prezente</strong> — broșuri, ghiduri, oferte</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">14</span><div><strong>Ecran/TV cu conținut brand</strong> — video destinații activ</div></li>
+        <li><span class="ck-num" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">15</span><div><strong>Niciun element non-brand vizibil</strong> — fără reclame terțe, logo-uri externe, decoruri nepotrivite</div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="band albastru" style="margin-top:14px;">
+    <p style="color:white;"><strong style="color:var(--galben-vibrant);">Rezultat audit:</strong> 15/15 = Certificat Conformitate emis · 12–14/15 = Termen remediere 30 zile · Sub 12/15 = Suspendare temporară drept utilizare brand</p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Audit Conformitate</span></div>
+</section>
+
+<!-- P18: REFERINȚE INTERNAȚIONALE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">7.17</div>
+    <div class="title">
+      <span class="eyebrow">Benchmarking Internațional</span>
+      <h2>Referințe Internaționale — Ce Putem Împrumuta</h2>
+    </div>
+  </div>
+  <p class="lead">Brandurile de turism naționale de succes au construit sisteme fizice coerente. Acestea sunt lecțiile aplicabile direct pentru România.</p>
+  <div class="tricolor"></div>
+  <div class="grid-3" style="margin-top:16px; gap:12px;">
+    <div class="ref-card">
+      <div class="country"><span class="flag-dot" style="background:#C8102E;"></span>VisitBritain</div>
+      <div class="brand-name">Visit Britain · UK</div>
+      <ul style="font-size:10.5px; line-height:1.7; margin:0; padding-left:14px;">
+        <li>Rețea de 160+ centre vizitatori, toate cu identitate uniformă</li>
+        <li>Kit fizic standardizat: mobilier, iluminare, materiale — furnizate central</li>
+        <li>Auditul anual obligatoriu cu fotografii geotagate</li>
+        <li><strong>De împrumutat:</strong> sistemul de audit cu fotografii și platforma de comandă materiale centralizată</li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <div class="country"><span class="flag-dot" style="background:#003DA5;"></span>Visit Denmark</div>
+      <div class="brand-name">Wonderful Copenhagen · DK</div>
+      <ul style="font-size:10.5px; line-height:1.7; margin:0; padding-left:14px;">
+        <li>Spații fizice minimaliste, curate — brand prin absența zgomotului</li>
+        <li>Ecranele digitale înlocuiesc materialele tipărite (sustenabilitate)</li>
+        <li>Personalul = ambasadori: training intens de brand &amp; storytelling</li>
+        <li><strong>De împrumutat:</strong> stilul curat și focusul pe experiență vs. materiale tipărite</li>
+      </ul>
+    </div>
+    <div class="ref-card">
+      <div class="country"><span class="flag-dot" style="background:#169B62;"></span>Tourism Ireland</div>
+      <div class="brand-name">Tourism Ireland · IE</div>
+      <ul style="font-size:10.5px; line-height:1.7; margin:0; padding-left:14px;">
+        <li>Identitate construită pe autenticitate — spații cu materiale locale (lemn, piatră)</li>
+        <li>Fotografiile de peisaj sunt elementul dominant — nu grafica</li>
+        <li>Sistemul de licențiere fizică strict — revocabil dacă standardele nu se respectă</li>
+        <li><strong>De împrumutat:</strong> materialele locale ca element distinctiv față de alte branduri</li>
+      </ul>
+    </div>
+  </div>
+  <div class="band galben" style="margin-top:14px;">
+    <p><strong>Recomandare pentru România:</strong> Combinarea rigorii britanice (audit sistematic) cu autenticitatea irlandeză (materiale locale — ceramică, lemn cioplat, textile tradiționale ca accente de decor) și claritatea scandinavă (ecrane digitale, reducerea materialelor tipărite). Această combinație ar crea o identitate fizică distinctivă și sustenabilă.</p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 7 · Referințe Internaționale</span></div>
+</section>
+
+
+<!-- ======================================================
+     CAPITOL 8 — DOCUMENTE OFICIALE
+     ====================================================== -->
+
+<!-- P19: TITLU CAPITOL 8 -->
+<section class="page dark-blue">
+  <div style="display:flex; align-items:center; height:100%; flex-direction:column; justify-content:center; text-align:center;">
+    <span class="eyebrow" style="color:var(--galben-vibrant);">Brand Book România · Identitate Vizuală</span>
+    <div style="font-family:var(--font-titlu); font-size:80px; font-weight:900; color:var(--galben-vibrant); line-height:1; margin:12px 0;">08</div>
+    <h1 style="color:white; font-size:38px; margin:0 0 10px;">Documente Oficiale</h1>
+    <p style="font-family:var(--font-premium); font-size:16px; font-style:italic; color:rgba(255,255,255,.7); max-width:52ch; margin:0 auto 24px;">Sistem documentar · Identitate în hârtie și digital</p>
+    <div class="tricolor" style="width:120px; margin:0 auto;"></div>
+    <p style="color:rgba(255,255,255,.55); font-size:11.5px; max-width:56ch; margin:24px auto 0; line-height:1.7;">
+      Fiecare document emis de o agenție de turism este un ambasador al brandului național. De la scrisoarea de ofertă până la voucher și certificat, sistemul documentar al României comunică profesionalism, coerență și identitate națională cu fiecare interacțiune scrisă.
+    </p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8</span></div>
+</section>
+
+<!-- P20: ANTET OFICIAL -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.1</div>
+    <div class="title">
+      <span class="eyebrow">Capitol 8 · Documente</span>
+      <h2>Antetul Oficial — Structura Standard A4</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Mockup antet complet</h3>
+      <div class="doc-mockup">
+        <div class="doc-header">
+          <div class="logo-zone">
+            <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="height:35px;">
+          </div>
+          <div style="text-align:right; font-size:9.5px; color:var(--gri-text); line-height:1.6;">
+            <div style="font-family:var(--font-titlu); font-size:10px; font-weight:700; color:var(--albastru-profund);">AGENȚIA DE TURISM EXEMPLU S.R.L.</div>
+            <div>Str. Victoriei nr. 12, București 010071</div>
+            <div>Tel: +40 21 123 4567</div>
+            <div>office@turism-exemplu.ro · www.romania.travel</div>
+            <div>CUI: RO12345678 · J40/1234/2020</div>
+          </div>
+        </div>
+        <div style="height:3px; background:linear-gradient(to right, var(--albastru-profund) 33.3%, var(--galben-vibrant) 33.3% 66.6%, var(--rosu-accent) 66.6%); margin-bottom:12px; -webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+        <div style="display:flex; gap:16px; margin-bottom:10px;">
+          <div class="doc-field" style="flex:1;">
+            <label>Nr. Înregistrare</label>
+            <div class="val">TUR/2024/0842</div>
+          </div>
+          <div class="doc-field" style="flex:1;">
+            <label>Data</label>
+            <div class="val">04 mai 2024</div>
+          </div>
+          <div class="doc-field" style="flex:1;">
+            <label>Pagini</label>
+            <div class="val">1 / 1</div>
+          </div>
+        </div>
+        <div class="doc-field">
+          <label>Destinatar</label>
+          <div class="val">D-na / D-l ___________________________</div>
+        </div>
+        <div style="height:60px; border:1px dashed #e5e7eb; border-radius:3px; margin-top:10px; display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:9px; color:#ccc; font-family:var(--font-titlu);">CORP DOCUMENT</span>
+        </div>
+        <div class="doc-footer">
+          <span>Licență Turism MT #0042</span>
+          <span>România · Unde tradiția întâlnește viitorul</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații antet</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Logo poziție</td><td>Stânga sus, aliniat la margine</td></tr>
+          <tr><td>Logo dimensiune</td><td>Înălțime 35px echivalent (imprimat: 18mm)</td></tr>
+          <tr><td>Contact dreapta</td><td>Montserrat Bold 10px + Open Sans 9px</td></tr>
+          <tr><td>Tricolor sub antet</td><td>Bandă 3px, lățime completă, albastru-galben-rosu</td></tr>
+          <tr><td>Font corp</td><td>Open Sans Regular 11px</td></tr>
+          <tr><td>Margini A4</td><td>Top 25mm, Bottom 20mm, Stânga 25mm, Dreapta 20mm</td></tr>
+          <tr><td>Hârtie</td><td>Coated 100g/m², alb optică</td></tr>
+          <tr><td>Footer</td><td>Open Sans 8px, gri, cu nr. licență</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Formatul digital:</strong> Template Word/Google Docs furnizat de Ministerul Turismului. Câmpurile logo și antet sunt blocate — nu pot fi modificate. Agenția completează doar câmpurile editable (nr. înregistrare, dată, corp document).</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Antet Oficial</span></div>
+</section>
+
+<!-- P21: SCRISOARE OFICIALĂ -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.2</div>
+    <div class="title">
+      <span class="eyebrow">Corespondență Oficială</span>
+      <h2>Scrisoarea Oficială — Mockup Complet A4</h2>
+    </div>
+  </div>
+  <div class="doc-mockup" style="max-width:480px; margin:0 auto; font-size:10px;">
+    <div class="doc-header">
+      <div class="logo-zone">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="height:30px;">
+      </div>
+      <div style="text-align:right; font-size:8.5px; color:#666; line-height:1.55;">
+        <div style="font-family:var(--font-titlu); font-weight:700; color:var(--albastru-profund); font-size:9px;">AGENȚIA DE TURISM EXEMPLU S.R.L.</div>
+        <div>Str. Victoriei nr. 12, București</div>
+        <div>Tel: +40 21 123 4567</div>
+        <div>office@turism-exemplu.ro</div>
+      </div>
+    </div>
+    <div style="height:3px; background:linear-gradient(to right, var(--albastru-profund) 33.3%, var(--galben-vibrant) 33.3% 66.6%, var(--rosu-accent) 66.6%); margin-bottom:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+    <div style="display:flex; justify-content:space-between; margin-bottom:10px; font-size:8.5px;">
+      <div><span style="color:#888; font-family:var(--font-titlu); font-size:7.5px; text-transform:uppercase; letter-spacing:.1em;">Ref:</span> TUR/2024/0842</div>
+      <div><span style="color:#888; font-family:var(--font-titlu); font-size:7.5px; text-transform:uppercase; letter-spacing:.1em;">Data:</span> 04 mai 2024</div>
+    </div>
+    <div style="margin-bottom:10px; font-size:8.5px; line-height:1.5;">
+      <div style="color:#888; font-family:var(--font-titlu); font-size:7.5px; text-transform:uppercase; letter-spacing:.1em; margin-bottom:3px;">Destinatar</div>
+      <div><strong>D-na Maria Popescu</strong></div>
+      <div>Str. Florilor nr. 5, Cluj-Napoca 400001</div>
+    </div>
+    <div style="font-family:var(--font-titlu); font-size:9.5px; font-weight:700; color:var(--albastru-profund); margin-bottom:8px; text-transform:uppercase; letter-spacing:.05em;">Ofertă servicii turistice — Circuit Transilvania</div>
+    <div class="doc-body" style="font-size:8.5px; line-height:1.65;">
+      <p style="margin:0 0 6px;">Stimate(ă) client,</p>
+      <p style="margin:0 0 6px;">Vă mulțumim pentru interesul acordat destinațiilor turistice din România. Ca urmare a discuției din data de 28 aprilie 2024, vă transmitem prezenta ofertă pentru circuitul <strong>„Transilvania Medievală"</strong>, cu plecare pe 15 iunie 2024.</p>
+      <p style="margin:0 0 6px;">Pachetul include: transport dus-întors din Cluj-Napoca, 5 nopți cazare 4★, ghid autorizat, toate intrările la obiective, asigurare de călătorie.</p>
+      <p style="margin:0 6px 0 0;"><strong>Preț total: 1.850 EUR / persoană</strong> (în baza a 2 persoane).</p>
+    </div>
+    <div style="margin-top:10px; border-top:1px solid #e5e7eb; padding-top:8px; display:flex; justify-content:space-between; align-items:flex-end;">
+      <div style="font-size:8.5px;">
+        <div style="font-family:var(--font-titlu); font-weight:700; font-size:9px; color:var(--albastru-profund);">ION GEORGESCU</div>
+        <div style="color:#888;">Consultant Turism Senior</div>
+        <div style="width:60px; height:20px; border:1px dashed #ccc; margin-top:4px; display:flex; align-items:center; justify-content:center;"><span style="font-size:7px; color:#ccc;">ȘTAMPILĂ</span></div>
+      </div>
+      <div style="font-size:7px; color:#aaa; text-align:right; max-width:160px; line-height:1.4;">Document emis electronic. Valid fără semnătură olografă conform Legii 455/2001.</div>
+    </div>
+    <div class="doc-footer" style="font-size:8px;">
+      <span>Licență MT #0042 · CUI RO12345678</span>
+      <span>www.romania.travel</span>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Scrisoare Oficială</span></div>
+</section>
+
+<!-- P22: CONTRACT TURISTIC -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.3</div>
+    <div class="title">
+      <span class="eyebrow">Documente Contractuale</span>
+      <h2>Contractul de Servicii Turistice</h2>
+    </div>
+  </div>
+  <div class="doc-mockup" style="max-width:500px; margin:0 auto; font-size:9.5px;">
+    <div class="doc-header">
+      <div class="logo-zone">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo România" style="height:28px;">
+      </div>
+      <div style="text-align:right; font-size:8px; color:#666; line-height:1.5;">
+        <div style="font-family:var(--font-titlu); font-weight:700; color:var(--albastru-profund); font-size:9px;">AGENȚIA DE TURISM EXEMPLU S.R.L.</div>
+        <div>Licență Turism MT #0042</div>
+      </div>
+    </div>
+    <div style="height:3px; background:linear-gradient(to right, var(--albastru-profund) 33.3%, var(--galben-vibrant) 33.3% 66.6%, var(--rosu-accent) 66.6%); margin-bottom:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+    <div style="text-align:center; margin-bottom:10px;">
+      <div style="font-family:var(--font-titlu); font-size:13px; font-weight:800; color:var(--albastru-profund);">CONTRACT DE SERVICII TURISTICE</div>
+      <div style="font-size:8px; color:#888; margin-top:2px;">Nr. CTR/2024/0842 · Data: 04.05.2024</div>
+    </div>
+    <div class="grid-2" style="gap:10px; margin-bottom:8px;">
+      <div>
+        <div style="font-family:var(--font-titlu); font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--albastru-profund); margin-bottom:4px;">Prestator</div>
+        <div style="font-size:8.5px; line-height:1.55; border:1px solid #e5e7eb; border-radius:3px; padding:6px;">Agenția de Turism Exemplu S.R.L.<br>CUI: RO12345678<br>Str. Victoriei 12, București</div>
+      </div>
+      <div>
+        <div style="font-family:var(--font-titlu); font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--albastru-profund); margin-bottom:4px;">Beneficiar</div>
+        <div style="font-size:8.5px; line-height:1.55; border:1px solid #e5e7eb; border-radius:3px; padding:6px;">Maria Ionescu Popescu<br>CNP: 2850412400XXX<br>Str. Florilor 5, Cluj-Napoca</div>
+      </div>
+    </div>
+    <div style="font-family:var(--font-titlu); font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--albastru-profund); margin:6px 0 4px;">Servicii contractate</div>
+    <table style="width:100%; border-collapse:collapse; font-size:8px; margin-bottom:8px;">
+      <thead><tr style="background:var(--gri-deschis); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><th style="padding:4px 6px; text-align:left; border:1px solid #e5e7eb;">Serviciu</th><th style="padding:4px 6px; border:1px solid #e5e7eb;">Nr.</th><th style="padding:4px 6px; border:1px solid #e5e7eb;">Preț unit</th><th style="padding:4px 6px; border:1px solid #e5e7eb;">Total</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:4px 6px; border:1px solid #e5e7eb;">Circuit Transilvania 5 zile</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:center;">2</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:right;">925 EUR</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:right;">1.850 EUR</td></tr>
+        <tr style="background:#fafafa; -webkit-print-color-adjust:exact; print-color-adjust:exact;"><td style="padding:4px 6px; border:1px solid #e5e7eb;">Asigurare de călătorie</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:center;">2</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:right;">25 EUR</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:right;">50 EUR</td></tr>
+        <tr><td colspan="3" style="padding:4px 6px; border:1px solid #e5e7eb; font-weight:700; font-family:var(--font-titlu); color:var(--albastru-profund);">TOTAL</td><td style="padding:4px 6px; border:1px solid #e5e7eb; text-align:right; font-weight:700; color:var(--albastru-profund);">1.900 EUR</td></tr>
+      </tbody>
+    </table>
+    <div style="display:flex; justify-content:space-between; margin-top:10px; padding-top:6px; border-top:1px solid #e5e7eb;">
+      <div style="font-size:8px; text-align:center; width:45%;"><div style="border-bottom:1px solid #333; margin-bottom:3px; height:18px;"></div>Prestator — semnătură &amp; ștampilă</div>
+      <div style="font-size:8px; text-align:center; width:45%;"><div style="border-bottom:1px solid #333; margin-bottom:3px; height:18px;"></div>Beneficiar — semnătură</div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Contract Turistic</span></div>
+</section>
+
+<!-- P23: VOUCHER TURISTIC -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.4</div>
+    <div class="title">
+      <span class="eyebrow">Documente Premium</span>
+      <h2>Voucherul Turistic — Design Premium</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:12px;">Mockup voucher</h3>
+      <div class="voucher-mockup">
+        <div class="v-header">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:24px; filter:brightness(0) invert(1);">
+          <div class="v-code">COD: VCH-2024-A7K9</div>
+        </div>
+        <div class="v-title">VOUCHER TURISTIC ROMÂNIA</div>
+        <div class="v-amount">500 EUR</div>
+        <div style="font-size:9px; color:rgba(255,255,255,.6); margin-bottom:10px;">Valoare disponibilă pentru servicii turistice</div>
+        <div style="height:1px; background:rgba(255,255,255,.15); margin-bottom:10px;"></div>
+        <div class="v-row">
+          <div class="v-field" style="flex:1;">
+            <label>Beneficiar</label>
+            <div class="val">Maria Ionescu</div>
+          </div>
+          <div class="v-field" style="flex:1;">
+            <label>Valabilitate</label>
+            <div class="val">31.12.2024</div>
+          </div>
+          <div class="voucher-qr">
+            <svg viewBox="0 0 30 30" fill="none"><rect width="30" height="30" fill="white"/><rect x="2" y="2" width="10" height="10" rx="1" fill="#0B3C5D"/><rect x="4" y="4" width="6" height="6" rx="0.5" fill="white"/><rect x="5" y="5" width="4" height="4" fill="#0B3C5D"/><rect x="18" y="2" width="10" height="10" rx="1" fill="#0B3C5D"/><rect x="20" y="4" width="6" height="6" rx="0.5" fill="white"/><rect x="21" y="5" width="4" height="4" fill="#0B3C5D"/><rect x="2" y="18" width="10" height="10" rx="1" fill="#0B3C5D"/><rect x="4" y="20" width="6" height="6" rx="0.5" fill="white"/><rect x="5" y="21" width="4" height="4" fill="#0B3C5D"/><rect x="14" y="14" width="3" height="3" fill="#0B3C5D"/><rect x="18" y="14" width="3" height="3" fill="#0B3C5D"/><rect x="22" y="18" width="3" height="3" fill="#0B3C5D"/><rect x="14" y="22" width="3" height="3" fill="#0B3C5D"/></svg>
+          </div>
+        </div>
+        <div style="margin-top:8px; font-size:8px; color:rgba(255,255,255,.4);">Servicii: cazare, transport, ghidaj, excursii</div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații voucher</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format fizic</td><td>A5 (148×210mm) sau 125×85mm (card)</td></tr>
+          <tr><td>Fond</td><td>Albastru profund #0B3C5D</td></tr>
+          <tr><td>Logo</td><td>Alb, orizontal, stânga sus</td></tr>
+          <tr><td>Valoare</td><td>Montserrat Black 28px, galben #FFC72C</td></tr>
+          <tr><td>Cod QR</td><td>Dreapta, pe fundal alb, 40×40mm</td></tr>
+          <tr><td>Imprimare fizică</td><td>350g carton, laminat mat, folie holografică</td></tr>
+          <tr><td>Format digital</td><td>PDF semnat electronic, email</td></tr>
+          <tr><td>Securitate</td><td>Cod unic + QR + watermark invizibil UV</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Notă anticontrafacere:</strong> Voucherele fizice de valoare mare (500 EUR+) includ filigran UV vizibil doar sub lumină ultravioletă și cod de securitate holografic pe laminare. Voucherele digitale folosesc semnătură electronică calificată.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Voucher Turistic</span></div>
+</section>
+
+<!-- P24: CERTIFICAT DE PARTICIPARE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.5</div>
+    <div class="title">
+      <span class="eyebrow">Documente Reprezentative</span>
+      <h2>Certificatul de Participare — Design Elegant</h2>
+    </div>
+  </div>
+  <div style="max-width:460px; margin:0 auto 16px;">
+    <div class="cert-mockup">
+      <span class="cert-sub">MINISTERUL TURISMULUI AL ROMÂNIEI</span>
+      <div style="margin:8px auto; display:flex; justify-content:center;">
+        <img src="../clean/04-logo-stacked.png" alt="Logo stacked" style="height:50px;">
+      </div>
+      <div class="cert-title">CERTIFICAT</div>
+      <div style="font-family:var(--font-text); font-size:9px; color:#666; margin:4px 0 8px;">Se acordă domnei / domnului</div>
+      <div class="cert-body-line"></div>
+      <div class="cert-name-area">Maria Alexandra Ionescu</div>
+      <div class="cert-body-line"></div>
+      <div style="font-size:9px; color:#555; margin:8px 0; line-height:1.6; text-align:center;">pentru participarea la programul<br><strong style="color:var(--albastru-profund);">„Ambasadori ai Turismului Românesc — Ediția 2024"</strong><br>desfășurat în perioada 15–19 aprilie 2024, București</div>
+      <div class="tricolor" style="width:80px; margin:10px auto;"></div>
+      <div class="cert-sig">
+        <div class="sig-line">
+          <div class="line"></div>
+          <div class="label">Director General</div>
+        </div>
+        <div class="sig-line">
+          <div class="line"></div>
+          <div class="label">Data emiterii</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații tehnice</h3>
+      <table class="spec-table" style="font-size:10.5px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format</td><td>A4 landscape sau A3 portrait</td></tr>
+          <tr><td>Hârtie</td><td>Ivory 200g/m², texturat</td></tr>
+          <tr><td>Bordură</td><td>Albastru profund 3px + colțuri galben</td></tr>
+          <tr><td>Logo centrat</td><td>Stacked (04-logo-stacked.png), 50mm</td></tr>
+          <tr><td>Font titlu</td><td>Montserrat Black 24px</td></tr>
+          <tr><td>Font corp</td><td>Poppins Italic 14px</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Contexte de utilizare</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Training-uri și certificări ghizi turistici</li>
+        <li>Programe ambasadori turism</li>
+        <li>Concursuri și festivaluri turistice</li>
+        <li>Participare la târguri internaționale</li>
+        <li>Finalizare cursuri de formare profesională</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Certificat</span></div>
+</section>
+
+<!-- P25: FACTURĂ / CHITANȚĂ -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.6</div>
+    <div class="title">
+      <span class="eyebrow">Documente Fiscale</span>
+      <h2>Factura și Chitanța — Documente Financiare</h2>
+    </div>
+  </div>
+  <div class="doc-mockup" style="max-width:500px; margin:0 auto 14px; font-size:9.5px;">
+    <div class="doc-header">
+      <div class="logo-zone">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:28px;">
+      </div>
+      <div style="text-align:right;">
+        <div style="font-family:var(--font-titlu); font-size:14px; font-weight:900; color:var(--albastru-profund);">FACTURĂ FISCALĂ</div>
+        <div style="font-size:8px; color:#888;">Seria TUR · Nr. 001842</div>
+        <div style="font-size:8px; color:#888;">Data: 04.05.2024</div>
+      </div>
+    </div>
+    <div style="height:3px; background:linear-gradient(to right, var(--albastru-profund) 33.3%, var(--galben-vibrant) 33.3% 66.6%, var(--rosu-accent) 66.6%); margin-bottom:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+    <div class="grid-2" style="gap:10px; font-size:8.5px; margin-bottom:10px;">
+      <div><div style="font-family:var(--font-titlu); font-size:7.5px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#888; margin-bottom:3px;">Furnizor</div><strong>Agenția Turism Exemplu SRL</strong><br>CUI: RO12345678<br>Str. Victoriei 12, București<br>IBAN: RO12 RNCB 0001 2345 6789 0001</div>
+      <div><div style="font-family:var(--font-titlu); font-size:7.5px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#888; margin-bottom:3px;">Client</div><strong>Maria Ionescu Popescu</strong><br>CNP: 2850412400XXX<br>Str. Florilor 5, Cluj-Napoca</div>
+    </div>
+    <table style="width:100%; border-collapse:collapse; font-size:8px; margin-bottom:8px;">
+      <thead><tr style="background:var(--albastru-profund); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><th style="padding:5px 7px; text-align:left; color:white; font-family:var(--font-titlu); font-size:7.5px; text-transform:uppercase; letter-spacing:.1em;">Denumire serviciu</th><th style="padding:5px 7px; color:white; font-family:var(--font-titlu); font-size:7.5px;">Nr.</th><th style="padding:5px 7px; color:white; font-family:var(--font-titlu); font-size:7.5px;">Preț</th><th style="padding:5px 7px; color:white; font-family:var(--font-titlu); font-size:7.5px;">TVA</th><th style="padding:5px 7px; color:white; font-family:var(--font-titlu); font-size:7.5px;">Total</th></tr></thead>
+      <tbody>
+        <tr><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb;">Circuit Transilvania 5 zile (2 pers.)</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:center;">1</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:right;">1.555,46</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:center;">19%</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:right;">1.850,00</td></tr>
+        <tr style="background:#fafafa; -webkit-print-color-adjust:exact; print-color-adjust:exact;"><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb;">Asigurare de călătorie (2 pers.)</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:center;">1</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:right;">42,02</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:center;">19%</td><td style="padding:4px 7px; border-bottom:1px solid #e5e7eb; text-align:right;">50,00</td></tr>
+        <tr style="background:var(--gri-deschis); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><td colspan="3" style="padding:5px 7px; font-family:var(--font-titlu); font-weight:700; color:var(--albastru-profund); font-size:9px;">TOTAL DE PLATĂ</td><td style="padding:5px 7px; color:#666; font-size:8px;">TVA: 295,54 EUR</td><td style="padding:5px 7px; font-family:var(--font-titlu); font-weight:800; color:var(--albastru-profund); font-size:10px; text-align:right;">1.900,00 EUR</td></tr>
+      </tbody>
+    </table>
+    <div class="doc-footer"><span>Document fiscal. Arhivare 10 ani.</span><span>Licență MT #0042</span></div>
+  </div>
+  <div class="band gri">
+    <p style="font-size:10.5px;"><strong>Format digital:</strong> PDF/A semnat electronic cu certificat calificat eIDAS. Transmis pe email cu subiect standardizat: <code style="background:#e8e8e8; padding:1px 4px; border-radius:2px; font-size:9.5px;">Factură TUR/2024/XXXX — Turism România</code></p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Factură</span></div>
+</section>
+
+<!-- P26: DOSAR DE PREZENTARE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.7</div>
+    <div class="title">
+      <span class="eyebrow">Materiale de Prezentare</span>
+      <h2>Dosarul de Prezentare — Copertă &amp; Structură</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Copertă dosar</h3>
+      <div style="background:var(--albastru-profund); border-radius:8px; padding:24px 20px; text-align:center; min-height:200px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+        <img src="../clean/04-logo-stacked.png" alt="Logo stacked" style="height:55px; filter:brightness(0) invert(1);">
+        <div>
+          <div style="width:60px; height:2px; background:var(--galben-vibrant); margin:12px auto;"></div>
+          <div style="font-family:var(--font-titlu); font-size:13px; font-weight:800; color:white; letter-spacing:.03em;">PROPUNERE PARTENERIAT</div>
+          <div style="font-family:var(--font-titlu); font-size:10px; font-weight:400; color:rgba(255,255,255,.7); margin-top:4px;">TURISM CULTURAL · 2024–2026</div>
+        </div>
+        <div style="font-size:8px; color:rgba(255,255,255,.5); font-family:var(--font-titlu);">Agenția de Turism Exemplu SRL · Mai 2024</div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații dosar</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format</td><td>A4 portret (210×297mm)</td></tr>
+          <tr><td>Copertă</td><td>300g/m² carton, plastifiat mat</td></tr>
+          <tr><td>Interior</td><td>100g/m² coated, offset full color</td></tr>
+          <tr><td>Cotor</td><td>Lipire termorezistentă sau spiralare</td></tr>
+          <tr><td>Fond copertă</td><td>Albastru profund #0B3C5D</td></tr>
+          <tr><td>Logo</td><td>Stacked alb, centrat vertical</td></tr>
+          <tr><td>Titlu</td><td>Montserrat ExtraBold, alb, centrat</td></tr>
+          <tr><td>Număr pagini recomandat</td><td>12–24 pagini conținut</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Structura internă recomandată:</strong> Prezentare brandului (2p) · Destinații principale (4–6p) · Pachete și prețuri (4p) · Contact și termeni (2p) · Pagina de back cover cu logo și contact.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Dosar Prezentare</span></div>
+</section>
+
+<!-- P27: PLIC OFICIAL -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.8</div>
+    <div class="title">
+      <span class="eyebrow">Corespondență</span>
+      <h2>Plicul Oficial — DL și C5</h2>
+    </div>
+  </div>
+  <div style="max-width:480px; margin:0 auto 16px;">
+    <h3 style="font-size:13px; margin-bottom:10px;">Mockup plic DL (110×220mm)</h3>
+    <div class="plic-mockup" style="height:120px;">
+      <div class="plic-sender">
+        <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:18px; display:block; margin-bottom:4px;">
+        <address style="font-size:8px; color:#888; font-style:normal; line-height:1.5;">Agenția de Turism Exemplu S.R.L.<br>Str. Victoriei nr. 12, București 010071<br>Tel: +40 21 123 4567</address>
+      </div>
+      <div style="margin-top:10px; border:1px solid #d0d5dd; border-radius:2px; padding:8px 10px; width:55%; margin-left:auto; background:#fafafa;">
+        <address style="font-size:9px; color:var(--gri-text); font-style:normal; line-height:1.6;">
+          <strong>Maria Ionescu Popescu</strong><br>
+          Str. Florilor nr. 5<br>
+          400001 Cluj-Napoca<br>
+          ROMÂNIA
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații plic DL</h3>
+      <table class="spec-table" style="font-size:10.5px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Dimensiune</td><td>110×220mm (DL standard)</td></tr>
+          <tr><td>Greutate hârtie</td><td>80g/m² offset alb</td></tr>
+          <tr><td>Logo expeditor</td><td>Stânga sus, orizontal 40mm lățime</td></tr>
+          <tr><td>Culoare logo</td><td>Albastru profund (nu alb invers)</td></tr>
+          <tr><td>Font adresă</td><td>Open Sans Regular 8pt</td></tr>
+          <tr><td>Fereastră</td><td>Fereastră transparentă dreapta (opțional)</td></tr>
+          <tr><td>Clei</td><td>Autoadeziv strip sau umezire</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Plic C5 (162×229mm)</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Pentru documente A5 sau A4 îndoite o dată</li>
+        <li>Același layout ca DL, adaptat proporțional</li>
+        <li>Logo la 10mm de marginea stângă, 10mm de sus</li>
+        <li>Fără fundal colorat — fond alb obligatoriu</li>
+        <li>Tricolor opțional: bandă 2px sub logo (40mm lățime)</li>
+        <li>Ștampila cu destinație în dreapta sus</li>
+      </ul>
+      <div class="band verde" style="margin-top:8px;">
+        <p style="font-size:10.5px;"><strong>Sustenabilitate:</strong> Se recomandă plicuri din hârtie reciclată cu logo imprimat digital (nu offsetat) pentru tiraje mici sub 500 buc.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Plic Oficial</span></div>
+</section>
+
+
+<!-- P28: CARTE DE VIZITĂ -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.9</div>
+    <div class="title">
+      <span class="eyebrow">Identitate Personală</span>
+      <h2>Cartea de Vizită — Față și Verso</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:24px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:12px;">Față (recto)</h3>
+      <div class="biz-card">
+        <div class="biz-front">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:22px;">
+            <div style="width:40px; height:40px; background:var(--gri-deschis); border-radius:50%; border:2px solid var(--albastru-profund); display:flex; align-items:center; justify-content:center; font-size:7px; color:#aaa; flex-shrink:0;">FOTO</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-titlu); font-size:13px; font-weight:800; color:var(--albastru-profund);">Ion Georgescu</div>
+            <div style="font-size:9.5px; color:#888; margin-bottom:8px;">Consultant Turism Senior</div>
+            <div style="font-size:9px; color:var(--gri-text); line-height:1.7;">
+              <div>+40 721 234 567</div>
+              <div>ion.georgescu@turism-exemplu.ro</div>
+              <div>www.romania.travel</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:6px; font-size:9px; color:#888; text-align:center;">Fața · Alb cu logo și contact</div>
+
+      <h3 style="font-size:13px; margin-top:16px; margin-bottom:12px;">Verso</h3>
+      <div class="biz-card">
+        <div class="biz-back" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:22px; filter:brightness(0) invert(1); margin-bottom:8px;">
+          <div class="tricolor" style="width:60px; height:3px; margin:0 auto 8px;"></div>
+          <div class="biz-back slogan" style="font-family:var(--font-premium); font-style:italic; color:rgba(255,255,255,.75); font-size:8.5px; text-align:center;">Unde tradiția întâlnește viitorul</div>
+        </div>
+      </div>
+      <div style="margin-top:6px; font-size:9px; color:#888; text-align:center;">Verso · Albastru profund cu logo alb</div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații carte de vizită</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Dimensiune</td><td>85×54mm (standard ISO)</td></tr>
+          <tr><td>Material</td><td>350g/m² carton coated</td></tr>
+          <tr><td>Laminare</td><td>Mat antirăzgâiat față; lucioasă verso</td></tr>
+          <tr><td>Colțuri</td><td>Drepte sau rotunjite R3 (opțional)</td></tr>
+          <tr><td>Logo față</td><td>Orizontal, stânga sus, 45mm lățime</td></tr>
+          <tr><td>Foto consultant</td><td>40×40mm cerc, dreapta sus (opțional)</td></tr>
+          <tr><td>Font nume</td><td>Montserrat ExtraBold 13px</td></tr>
+          <tr><td>Font contact</td><td>Open Sans Regular 9px</td></tr>
+          <tr><td>Verso fond</td><td>Albastru profund #0B3C5D</td></tr>
+          <tr><td>Verso logo</td><td>Alb centrat + tricolor + slogan</td></tr>
+          <tr><td>Tiraj minim</td><td>500 buc/consultant</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Versiune digitală:</strong> vCard (.vcf) cu logo embeds, distribuit prin QR code pe verso sau prin email. Informațiile din vCard respectă aceeași ordine: Nume, Funcție, Tel, Email, Web.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Carte de Vizită</span></div>
+</section>
+
+<!-- P29: INSIGNĂ / ECUSON PERSONAL -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.10</div>
+    <div class="title">
+      <span class="eyebrow">Identitate Fizică</span>
+      <h2>Insigna și Ecusonul de Personal</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:24px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:14px;">Mockup ecuson standard</h3>
+      <div style="display:flex; justify-content:center; margin-bottom:14px;">
+        <div class="ecuson" style="width:140px;">
+          <div class="ecuson-top" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+            <img src="../clean/03-logo-orizontal.png" alt="Logo" style="filter:brightness(0) invert(1); height:20px;">
+          </div>
+          <div class="ecuson-body" style="padding:10px 12px;">
+            <div class="ecuson-photo" style="width:36px; height:36px; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+              <div style="width:100%; height:100%; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:8px; color:#aaa; background:var(--gri-deschis);">FOTO</div>
+            </div>
+            <div class="ecuson-name" style="font-size:10.5px; margin-top:6px;">ELENA STAN</div>
+            <div class="ecuson-role" style="font-size:8.5px;">Consultant Turism</div>
+            <div style="margin-top:6px;">
+              <div class="tricolor" style="height:3px; border-radius:2px; margin:4px 0;"></div>
+            </div>
+            <div class="ecuson-code">ID: MT-2024-0203</div>
+          </div>
+        </div>
+      </div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Insignă lapel (pin)</h3>
+      <div style="display:flex; justify-content:center; margin-bottom:8px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--albastru-profund); border:2px solid var(--galben-vibrant); display:flex; align-items:center; justify-content:center; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+          <img src="../clean/05-doar-simbol.png" alt="Simbol" style="height:22px; filter:brightness(0) invert(1);">
+        </div>
+      </div>
+      <div style="font-size:9px; color:#888; text-align:center;">Pin metalic emailat · Diametru 25mm</div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații ecuson</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Dimensiune ecuson</td><td>85×54mm sau 90×60mm</td></tr>
+          <tr><td>Material</td><td>PVC rigid 0.76mm sau carton 400g plastifiat</td></tr>
+          <tr><td>Colțuri</td><td>Rotunjite R5mm obligatoriu</td></tr>
+          <tr><td>Zonă superioară</td><td>Albastru profund 30% din înălțime + logo alb</td></tr>
+          <tr><td>Zonă inferioară</td><td>Alb: foto, nume, funcție, cod, tricolor</td></tr>
+          <tr><td>Foto</td><td>Cerc 36px, fundal alb, îndreptată față</td></tr>
+          <tr><td>Cod angajat</td><td>Montserrat, 7px, gri, format MT-AAAA-XXXX</td></tr>
+          <tr><td>Prindere</td><td>Clip metalic alligator + yoyo retractabil</td></tr>
+        </tbody>
+      </table>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații insignă lapel</h3>
+      <ul style="font-size:11px; line-height:1.8;">
+        <li>Diametru 25mm (rotund) sau 30×20mm (oval)</li>
+        <li>Metal emailat la cald, culori: albastru profund + alb</li>
+        <li>Pin metalic auriu pe verso</li>
+        <li>Simbol fără text (05-doar-simbol.png)</li>
+        <li>Opțional: tricolor email pe bordura exterioară</li>
+      </ul>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Ecuson &amp; Insignă</span></div>
+</section>
+
+<!-- P30: EMAIL SIGNATURE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.11</div>
+    <div class="title">
+      <span class="eyebrow">Comunicare Digitală</span>
+      <h2>Semnătura de Email — Standard Corporativ</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Mockup semnătură email</h3>
+      <div class="email-sig">
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <div style="width:48px; height:48px; border-radius:50%; background:var(--gri-deschis); border:2px solid var(--albastru-profund); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:7px; color:#aaa; -webkit-print-color-adjust:exact; print-color-adjust:exact;">FOTO</div>
+          <div>
+            <div class="sig-name">Ion Georgescu</div>
+            <div class="sig-title">Consultant Turism Senior · Agenția de Turism Exemplu SRL</div>
+          </div>
+        </div>
+        <hr class="sig-divider">
+        <div class="sig-contact">
+          <div>Tel: <a href="#">+40 721 234 567</a></div>
+          <div>Email: <a href="#">ion.georgescu@turism-exemplu.ro</a></div>
+          <div>Web: <a href="#">www.romania.travel</a></div>
+          <div>Adresă: Str. Victoriei 12, București 010071</div>
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:18px;">
+          <div class="tricolor" style="height:3px; width:40px; border-radius:2px;"></div>
+        </div>
+        <div class="sig-socials">
+          <div class="sig-social-icon" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"><span style="color:white; font-size:8px; font-weight:700;">f</span></div>
+          <div class="sig-social-icon" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"><span style="color:white; font-size:8px; font-weight:700;">in</span></div>
+          <div class="sig-social-icon" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"><span style="color:white; font-size:8px; font-weight:700;">ig</span></div>
+          <div class="sig-social-icon" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;"><span style="color:white; font-size:8px; font-weight:700;">yt</span></div>
+        </div>
+        <hr class="sig-divider">
+        <div class="sig-disclaimer">Acest email și atașamentele sale pot conține informații confidențiale. Dacă nu sunteți destinatarul intenționat, vă rugăm să notificați expeditorul și să ștergeți mesajul. România — Unde tradiția întâlnește viitorul.</div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații semnătură email</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Lățime totală</td><td>Max. 600px (compatibil Gmail, Outlook)</td></tr>
+          <tr><td>Font</td><td>Arial sau sans-serif (fallback web-safe)</td></tr>
+          <tr><td>Nume</td><td>Arial Bold 14px, #0B3C5D</td></tr>
+          <tr><td>Funcție</td><td>Arial Regular 11px, #666666</td></tr>
+          <tr><td>Contact</td><td>Arial Regular 10px, #4A4A4A</td></tr>
+          <tr><td>Link-uri</td><td>Culoare #0B3C5D, fără subliniere</td></tr>
+          <tr><td>Logo</td><td>PNG 2x, max. 120px lățime, hosted URL</td></tr>
+          <tr><td>Foto angajat</td><td>48×48px cerc, hosted URL</td></tr>
+          <tr><td>Disclaimer</td><td>Arial Regular 8px, #999999, italic</td></tr>
+          <tr><td>Social icons</td><td>18×18px, hosted PNG sau SVG inline</td></tr>
+        </tbody>
+      </table>
+      <div class="band galben">
+        <p style="font-size:10.5px;"><strong>Template HTML furnizat:</strong> Fișier .htm preconfiguarat pentru Outlook și Gmail. Angajatul completează doar: Nume, Funcție, Telefon. Logo și disclaimer sunt blocate la nivel de template IT.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Semnătură Email</span></div>
+</section>
+
+<!-- P31: TEMPLATE POWERPOINT -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.12</div>
+    <div class="title">
+      <span class="eyebrow">Prezentări Digitale</span>
+      <h2>Template PowerPoint / Keynote — Slides Standard</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:16px; margin-bottom:16px;">
+    <div>
+      <h3 style="font-size:12px; margin-bottom:8px; color:#555;">Pagina de titlu (slide 1)</h3>
+      <div class="ppt-slide">
+        <div class="slide-title-page" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:30px; filter:brightness(0) invert(1); margin-bottom:14px;">
+          <div style="width:50px; height:2px; background:var(--galben-vibrant); margin:0 auto 14px;"></div>
+          <div style="font-family:var(--font-titlu); font-size:16px; font-weight:900; color:var(--galben-vibrant); letter-spacing:.03em; text-align:center; line-height:1.2;">TURISM ÎN ROMÂNIA<br><span style="font-size:11px; color:var(--galben-vibrant); opacity:.9;">Oportunități și Tendințe 2024</span></div>
+          <div style="font-family:var(--font-premium); font-size:9px; font-style:italic; color:rgba(255,255,255,.6); margin-top:10px;">Ion Georgescu · Consultant Senior · Mai 2024</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:12px; margin-bottom:8px; color:#555;">Slide de conținut (slide 2+)</h3>
+      <div class="ppt-slide">
+        <div class="slide-header" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+          <img src="../clean/05-doar-simbol.png" alt="Symbol" style="height:16px; filter:brightness(0) invert(1);">
+          <div class="slide-title-text">DESTINAȚII RECOMANDATE 2024</div>
+        </div>
+        <div class="slide-content-page">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px;">
+            <div style="background:var(--gri-deschis); border-radius:4px; padding:6px 8px; border-left:2px solid var(--albastru-profund); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><div style="font-family:var(--font-titlu); font-size:8.5px; font-weight:700; color:var(--albastru-profund);">Transilvania</div><div style="font-size:7.5px; color:#666;">Castele, munți, gastronomie</div></div>
+            <div style="background:var(--gri-deschis); border-radius:4px; padding:6px 8px; border-left:2px solid var(--verde-natura); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><div style="font-family:var(--font-titlu); font-size:8.5px; font-weight:700; color:var(--verde-natura);">Delta Dunării</div><div style="font-size:7.5px; color:#666;">Biodiversitate, pescuit, birdwatching</div></div>
+            <div style="background:var(--gri-deschis); border-radius:4px; padding:6px 8px; border-left:2px solid var(--galben-vibrant); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><div style="font-family:var(--font-titlu); font-size:8.5px; font-weight:700; color:#8b6914;">Maramureș</div><div style="font-size:7.5px; color:#666;">Tradiție vie, cimitirul vesel</div></div>
+            <div style="background:var(--gri-deschis); border-radius:4px; padding:6px 8px; border-left:2px solid var(--rosu-accent); -webkit-print-color-adjust:exact; print-color-adjust:exact;"><div style="font-family:var(--font-titlu); font-size:8.5px; font-weight:700; color:var(--rosu-accent);">Dobrogea</div><div style="font-size:7.5px; color:#666;">Litoral, cetăți, peisaje pontice</div></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding-top:6px; border-top:1px solid #e5e7eb;">
+            <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:12px;">
+            <div style="font-size:7px; color:#aaa; font-family:var(--font-titlu);">CONFIDENTIAL · 2024</div>
+            <div style="font-size:7px; color:#aaa;">Slide 2 / 12</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:14px;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:8px;">Specificații template</h3>
+      <table class="spec-table" style="font-size:10.5px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format slide</td><td>16:9 (1920×1080px)</td></tr>
+          <tr><td>Slide titlu fond</td><td>Albastru profund #0B3C5D</td></tr>
+          <tr><td>Slide conținut fond</td><td>Alb #FFFFFF</td></tr>
+          <tr><td>Header conținut</td><td>Albastru profund + simbol + titlu alb</td></tr>
+          <tr><td>Font titlu slide</td><td>Montserrat ExtraBold 28–36pt</td></tr>
+          <tr><td>Font corp slide</td><td>Open Sans Regular 18–20pt</td></tr>
+          <tr><td>Culoare accentuare</td><td>Galben #FFC72C pentru highlight</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="band gri" style="margin-top:0;">
+        <p style="font-size:10.5px;"><strong>Formate disponibile:</strong> PPTX (PowerPoint 2019+), KEY (Keynote macOS), Google Slides (import PPTX). Template distribuit prin platforma intranet a Ministerului Turismului sau la cerere pe email la brand@turism.gov.ro</p>
+      </div>
+      <div class="band rosu" style="margin-top:10px;">
+        <p style="font-size:10.5px;"><strong>Interzis:</strong> Modificarea slide-ului master, schimbarea culorilor brandului, adăugarea de logo-uri terțe în header sau footer, utilizarea fonturilor altele decât Montserrat și Open Sans.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Template Prezentare</span></div>
+</section>
+
+<!-- P32: MEMO INTERN -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.13</div>
+    <div class="title">
+      <span class="eyebrow">Comunicare Internă</span>
+      <h2>Nota Internă și Memo-ul Oficial</h2>
+    </div>
+  </div>
+  <div class="grid-2" style="gap:20px; align-items:start;">
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Mockup notă internă / memo</h3>
+      <div class="memo-mockup">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <img src="../clean/03-logo-orizontal.png" alt="Logo" style="height:22px;">
+          <div style="font-family:var(--font-titlu); font-size:10px; font-weight:800; color:var(--albastru-profund); letter-spacing:.05em;">NOTĂ INTERNĂ</div>
+        </div>
+        <div style="height:2px; background:linear-gradient(to right, var(--albastru-profund) 33.3%, var(--galben-vibrant) 33.3% 66.6%, var(--rosu-accent) 66.6%); margin-bottom:12px; -webkit-print-color-adjust:exact; print-color-adjust:exact;"></div>
+        <div class="memo-mockup memo-header" style="padding:8px 12px; background:var(--gri-deschis); border-radius:4px; border-left:3px solid var(--albastru-profund); margin-bottom:10px; -webkit-print-color-adjust:exact; print-color-adjust:exact;">
+          <div class="memo-row"><div class="lbl">Către:</div><div>Toți Consultanții · Dept. Vânzări</div></div>
+          <div class="memo-row"><div class="lbl">De la:</div><div>Ion Georgescu · Manager Vânzări</div></div>
+          <div class="memo-row"><div class="lbl">Data:</div><div>04 mai 2024</div></div>
+          <div class="memo-row"><div class="lbl">Ref.:</div><div>MEMO/2024/0124</div></div>
+          <div class="memo-row"><div class="lbl">Subiect:</div><div><strong>Actualizare politică oferte sezon estival 2024</strong></div></div>
+        </div>
+        <div style="font-size:9.5px; color:var(--gri-text); line-height:1.65;">
+          <p style="margin:0 0 6px;">Vă informăm că începând cu <strong>15 mai 2024</strong>, toate ofertele pentru destinații de litoral vor include obligatoriu asigurare de anulare. Această modificare se aplică tuturor contractelor noi.</p>
+          <p style="margin:0;">Detalii complete în procedura P-VNZ-024. Întrebările se adresează prin email la manager.vanzari@turism-exemplu.ro.</p>
+        </div>
+        <div style="margin-top:12px; padding-top:8px; border-top:1px solid #e5e7eb; font-size:8.5px; color:#888;">
+          Agenția de Turism Exemplu SRL · Str. Victoriei 12, București · Licență MT #0042
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size:13px; margin-bottom:10px;">Specificații notă internă</h3>
+      <table class="spec-table" style="font-size:10.5px; margin-bottom:12px;">
+        <thead><tr><th>Element</th><th>Specificație</th></tr></thead>
+        <tbody>
+          <tr><td>Format</td><td>A4 portret sau email HTML</td></tr>
+          <tr><td>Antet</td><td>Logo stânga + „NOTĂ INTERNĂ" dreapta</td></tr>
+          <tr><td>Tricolor sub antet</td><td>Bandă 2px, lățime completă</td></tr>
+          <tr><td>Bloc câmpuri</td><td>Fundal gri deschis, bordură stânga albastru</td></tr>
+          <tr><td>Font câmpuri</td><td>Montserrat Bold 7pt etichete + Open Sans 9pt valori</td></tr>
+          <tr><td>Corp memo</td><td>Open Sans Regular 10pt, margini 25mm</td></tr>
+          <tr><td>Numerotare</td><td>MEMO/AAAA/XXXX obligatoriu</td></tr>
+          <tr><td>Arhivare</td><td>5 ani, dosar fizic și digital (.pdf/a)</td></tr>
+        </tbody>
+      </table>
+      <div class="band verde">
+        <p style="font-size:10.5px;"><strong>Comunicare internă digitală:</strong> Memo-urile trimise pe email păstrează același format vizual, dar în versiune HTML simplificată — fără formatare complexă. Subiectul emailului începe obligatoriu cu: <strong>[MEMO]</strong> urmat de subiect.</p>
+      </div>
+    </div>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Memo Intern</span></div>
+</section>
+
+<!-- P33: SPECIFICAȚII TEHNICE DOCUMENTE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.14</div>
+    <div class="title">
+      <span class="eyebrow">Referință Tehnică</span>
+      <h2>Specificații Tehnice — Tabel Complet Documente</h2>
+    </div>
+  </div>
+  <p style="font-size:11.5px; margin-bottom:12px;">Tabelul de mai jos centralizează toate specificațiile tehnice pentru documentele din sistemul documentar al brandului România. Acesta este documentul de referință pentru tipografii și departamentele IT.</p>
+
+  <table class="spec-table" style="font-size:10px;">
+    <thead>
+      <tr>
+        <th>Document</th>
+        <th>Format</th>
+        <th>Font titlu</th>
+        <th>Font corp</th>
+        <th>Dim. corp</th>
+        <th>Margini</th>
+        <th>Culori primare</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Antet A4</strong></td><td>A4 portret</td><td>Montserrat Bold</td><td>Open Sans</td><td>11px</td><td>25/20/25/20mm</td><td>#0B3C5D + #FFC72C</td></tr>
+      <tr><td><strong>Scrisoare oficială</strong></td><td>A4 portret</td><td>Montserrat Bold</td><td>Open Sans</td><td>11px</td><td>25/20/25/20mm</td><td>#0B3C5D</td></tr>
+      <tr><td><strong>Contract turistic</strong></td><td>A4 portret</td><td>Montserrat ExtraBold</td><td>Open Sans</td><td>10px</td><td>25/20/25/20mm</td><td>#0B3C5D + alb</td></tr>
+      <tr><td><strong>Voucher turistic</strong></td><td>A5 / 125×85mm</td><td>Montserrat Black</td><td>Open Sans</td><td>9px</td><td>15/15mm</td><td>#0B3C5D + #FFC72C</td></tr>
+      <tr><td><strong>Certificat</strong></td><td>A4 landscape</td><td>Montserrat Black</td><td>Poppins Italic</td><td>14px</td><td>20/20mm</td><td>#0B3C5D + #FFC72C</td></tr>
+      <tr><td><strong>Factură</strong></td><td>A4 portret</td><td>Montserrat Bold</td><td>Open Sans</td><td>10px</td><td>25/20/25/20mm</td><td>#0B3C5D</td></tr>
+      <tr><td><strong>Dosar copertă</strong></td><td>A4 portret</td><td>Montserrat ExtraBold</td><td>Montserrat</td><td>13px</td><td>20/20mm</td><td>#0B3C5D + alb</td></tr>
+      <tr><td><strong>Plic DL</strong></td><td>110×220mm</td><td>—</td><td>Open Sans</td><td>8px</td><td>10/10mm</td><td>#0B3C5D (logo)</td></tr>
+      <tr><td><strong>Carte vizită față</strong></td><td>85×54mm</td><td>Montserrat ExtraBold</td><td>Open Sans</td><td>9px</td><td>5/5mm</td><td>Alb + #0B3C5D</td></tr>
+      <tr><td><strong>Carte vizită verso</strong></td><td>85×54mm</td><td>Montserrat</td><td>Poppins Italic</td><td>8.5px</td><td>5/5mm</td><td>#0B3C5D + alb</td></tr>
+      <tr><td><strong>Ecuson personal</strong></td><td>85×54mm</td><td>Montserrat Bold</td><td>Open Sans</td><td>9px</td><td>3/3mm</td><td>#0B3C5D + alb</td></tr>
+      <tr><td><strong>Semnătură email</strong></td><td>600px lățime</td><td>Arial Bold</td><td>Arial</td><td>10px</td><td>—</td><td>#0B3C5D + #FFC72C</td></tr>
+      <tr><td><strong>Slide titlu PPT</strong></td><td>1920×1080px</td><td>Montserrat ExtraBold</td><td>Open Sans</td><td>20px</td><td>60/60px</td><td>#0B3C5D + #FFC72C</td></tr>
+      <tr><td><strong>Slide conținut PPT</strong></td><td>1920×1080px</td><td>Montserrat Bold</td><td>Open Sans</td><td>18px</td><td>60/60px</td><td>Alb + #0B3C5D header</td></tr>
+      <tr><td><strong>Memo intern</strong></td><td>A4 portret</td><td>Montserrat Bold</td><td>Open Sans</td><td>10px</td><td>25/20/25/20mm</td><td>#0B3C5D + #F5F5F5</td></tr>
+    </tbody>
+  </table>
+
+  <div class="band gri" style="margin-top:14px;">
+    <p style="font-size:10.5px;"><strong>Acces fonturi:</strong> Montserrat și Open Sans sunt disponibile gratuit pe Google Fonts (fonts.google.com). Poppins — disponibil tot pe Google Fonts. Pentru producție tipografică: fișierele OTF/TTF sunt furnizate de brand management în kit-ul de onboarding.</p>
+  </div>
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Specificații Tehnice</span></div>
+</section>
+
+<!-- P34: KIT PENTRU AGENȚII PARTENERE -->
+<section class="page">
+  <div class="section-head">
+    <div class="num">8.15</div>
+    <div class="title">
+      <span class="eyebrow">Onboarding Parteneri</span>
+      <h2>Kit pentru Agenții Partenere — Pachet de Branding</h2>
+    </div>
+  </div>
+  <p class="lead">Fiecare agenție nou acreditată primește pachetul complet de onboarding de brand. Acesta conține toate resursele necesare pentru implementarea corectă a identității vizuale România.</p>
+  <div class="tricolor"></div>
+
+  <div class="kit-grid" style="margin-top:16px;">
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Fișiere Logo</h4>
+      <ul>
+        <li>SVG — vector scalabil</li>
+        <li>EPS — producție tipografică</li>
+        <li>PNG 300dpi — toate variantele</li>
+        <li>PNG 72dpi — web &amp; email</li>
+        <li>AI — fișier sursă Adobe Illustrator</li>
+        <li>Favicon .ico 32×32px</li>
+      </ul>
+    </div>
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Template-uri Tipărite</h4>
+      <ul>
+        <li>Antet A4 — .docx și .indd</li>
+        <li>Carte vizită — .indd + .pdf print-ready</li>
+        <li>Plic DL și C5 — .indd</li>
+        <li>Dosar copertă — .indd</li>
+        <li>Voucher A5 — .indd</li>
+        <li>Certificat A4 — .indd</li>
+      </ul>
+    </div>
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Template-uri Digitale</h4>
+      <ul>
+        <li>PowerPoint .pptx (16:9)</li>
+        <li>Google Slides (link)</li>
+        <li>Keynote .key</li>
+        <li>Semnătură email .htm</li>
+        <li>Fond ecran HD și 4K</li>
+        <li>Template Word .dotx</li>
+      </ul>
+    </div>
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Fotografii Brand</h4>
+      <ul>
+        <li>100+ imagini destinații licențiate</li>
+        <li>20 imagini lifestyle turism</li>
+        <li>Textele drepturilor de utilizare</li>
+        <li>Categorii: natură, orașe, tradiții</li>
+        <li>Format: JPG 300dpi + WebP 72dpi</li>
+      </ul>
+    </div>
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Fonturi</h4>
+      <ul>
+        <li>Montserrat — toate weights OTF</li>
+        <li>Open Sans — Regular, Bold, Italic</li>
+        <li>Poppins — Regular, Medium, SemiBold</li>
+        <li>Licență SIL OFL (comercial permis)</li>
+        <li>Web fonts WOFF2 incluse</li>
+      </ul>
+    </div>
+    <div class="kit-item" style="-webkit-print-color-adjust:exact; print-color-adjust:exact;">
+      <h4>Documente Ghid</h4>
+      <ul>
+        <li>Ghid prescurtat brand (1 pagină PDF)</li>
+        <li>Dos &amp; Don'ts — poster A3</li>
+        <li>Checklist audit 15 puncte</li>
+        <li>Contact brand management</li>
+        <li>FAQ frecvente parteneri</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="band albastru" style="margin-top:16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <p style="color:var(--galben-vibrant); font-weight:700; margin-bottom:4px; font-size:11.5px;">Acces portal brand</p>
+        <p style="color:rgba(255,255,255,.85); font-size:10.5px; margin:0;">brand.romania.travel · Login cu credențiale agenție acreditată</p>
+      </div>
+      <div style="text-align:right;">
+        <p style="color:rgba(255,255,255,.7); font-size:9.5px; margin:0;">Contact brand management:<br><strong style="color:white;">brand@turism.gov.ro</strong><br>Tel: +40 21 400 1000</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-meta"><span>România · Identitate Vizuală</span><span>Capitol 8 · Kit Parteneri</span></div>
+</section>
+
+</body>
+</html>

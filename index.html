@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>România — Identitate Vizuală Națională</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --albastru-profund: #0B3C5D;
+  --albastru-dark:    #051e30;
+  --galben-vibrant:   #FFC72C;
+  --rosu-accent:      #C8102E;
+  --verde-natura:     #2E7D32;
+  --albastru-deschis: #4DA8DA;
+  --alb:              #FFFFFF;
+  --gri-deschis:      #F5F5F5;
+  --gri-text:         #4A4A4A;
+  --negru:            #111111;
+  --font-titlu:       'Montserrat', system-ui, sans-serif;
+  --font-text:        'Open Sans', system-ui, sans-serif;
+  --font-premium:     'Poppins', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-text);
+  background: var(--albastru-dark);
+  color: var(--alb);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── TRICOLOR BAR ─── */
+.tricolor-bar {
+  height: 4px; display: flex;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+}
+.tc { flex: 1; }
+.tc1 { background: #002B7F; }
+.tc2 { background: #FCD116; }
+.tc3 { background: #CE1126; }
+
+/* ─── HEADER ─── */
+.site-header {
+  position: fixed; top: 4px; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 48px;
+  background: rgba(5,30,48,.9);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,199,44,.15);
+}
+.header-logo img {
+  height: 36px;
+  display: block;
+}
+.header-nav {
+  display: flex; gap: 32px;
+}
+.header-nav a {
+  font-family: var(--font-titlu);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.6); text-decoration: none;
+  transition: color .2s;
+}
+.header-nav a:hover { color: var(--galben-vibrant); }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.lang-switch {
+  display: flex; align-items: center; gap: 6px;
+}
+.lang-btn {
+  font-family: var(--font-titlu);
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,.35);
+  padding: 4px 6px; border-radius: 3px;
+  transition: color .15s;
+}
+.lang-btn:hover { color: rgba(255,255,255,.7); }
+.lang-btn.active { color: var(--galben-vibrant); }
+.lang-sep { color: rgba(255,255,255,.2); font-size: 11px; }
+
+/* ─── HERO ─── */
+.hero {
+  height: 100vh; min-height: 620px;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('photos/01-carpati.jpg');
+  background-size: cover; background-position: center;
+  transform: scale(1.05);
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5,30,48,.45) 0%,
+    rgba(5,30,48,.65) 50%,
+    rgba(5,30,48,.92) 100%
+  );
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  padding: 0 24px;
+  z-index: 2;
+}
+.hero-eyebrow {
+  font-family: var(--font-titlu);
+  font-size: 11px; font-weight: 700; letter-spacing: .4em; text-transform: uppercase;
+  color: rgba(255,199,44,.75); margin-bottom: 28px;
+}
+.hero-logo {
+  width: 120px; margin: 0 auto 28px;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+.hero-title {
+  font-family: var(--font-titlu);
+  font-size: 80px; font-weight: 900; letter-spacing: -.02em; line-height: .95;
+  color: var(--alb);
+  margin-bottom: 18px;
+}
+.hero-subtitle {
+  font-family: var(--font-premium);
+  font-size: 15px; font-weight: 300; letter-spacing: .35em; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 48px;
+}
+.hero-cta { display: flex; gap: 16px; justify-content: center; }
+.btn-primary {
+  font-family: var(--font-titlu);
+  font-size: 12px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase;
+  padding: 16px 36px; border-radius: 5px;
+  background: var(--galben-vibrant); color: var(--albastru-profund);
+  border: none; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  transition: opacity .2s;
+}
+.btn-primary:hover { opacity: .88; }
+.scroll-indicator {
+  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  z-index: 2;
+}
+.scroll-line { width: 1px; height: 44px; background: linear-gradient(180deg, var(--galben-vibrant), transparent); }
+.scroll-label {
+  font-family: var(--font-titlu);
+  font-size: 9px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+}
+
+/* ─── SECTION HEADER ─── */
+.section-header {
+  display: flex; align-items: flex-end; gap: 20px;
+  padding: 56px 48px 28px;
+}
+.section-num {
+  font-family: var(--font-titlu);
+  font-size: 56px; font-weight: 900; line-height: 1;
+  color: rgba(255,199,44,.12);
+}
+.section-meta {}
+.section-eyebrow {
+  font-family: var(--font-titlu);
+  font-size: 10px; font-weight: 700; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--albastru-deschis); margin-bottom: 5px;
+}
+.section-title {
+  font-family: var(--font-titlu);
+  font-size: 30px; font-weight: 800;
+  color: var(--alb);
+}
+
+/* ─── EDITORIAL GRID ─── */
+.editorial-grid {
+  display: grid; gap: 4px;
+  padding: 0 48px 8px;
+}
+.grid-3-asym { grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 300px 220px; }
+.grid-3-rev  { grid-template-columns: 1fr 1fr 2fr; grid-template-rows: 260px 260px; }
+.grid-2      { grid-template-columns: 1fr 1fr;     grid-template-rows: 340px; }
+
+.gcell {
+  position: relative; overflow: hidden; border-radius: 3px;
+  cursor: pointer;
+}
+.gcell img.cell-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transition: transform .4s ease;
+}
+.gcell:hover img.cell-bg { transform: scale(1.04); }
+.gcell-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(5,30,48,.88) 100%);
+}
+.gcell-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 22px;
+  z-index: 2;
+}
+.gcell-tag {
+  font-family: var(--font-titlu);
+  font-size: 9px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--galben-vibrant); margin-bottom: 5px;
+}
+.gcell-title {
+  font-family: var(--font-titlu);
+  font-size: 16px; font-weight: 700; color: var(--alb); line-height: 1.2;
+}
+
+.span-row2 { grid-row: 1 / 3; }
+.span-col2 { grid-column: 1 / 3; }
+.span-col3 { grid-column: 3 / 4; grid-row: 1 / 3; }
+
+/* ─── FOOTER ─── */
+.site-footer {
+  margin-top: 48px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-download {
+  padding: 72px 48px 56px;
+  display: flex; align-items: center; gap: 48px;
+  background: linear-gradient(135deg, var(--albastru-profund) 0%, var(--albastru-dark) 100%);
+  border-top: 1px solid rgba(255,199,44,.15);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-dl-left { flex: 1; }
+.footer-dl-eyebrow {
+  font-family: var(--font-titlu);
+  font-size: 10px; font-weight: 700; letter-spacing: .35em; text-transform: uppercase;
+  color: var(--galben-vibrant); margin-bottom: 14px;
+}
+.footer-dl-logo {
+  height: 40px; display: block; margin-bottom: 20px;
+}
+.footer-dl-title {
+  font-family: var(--font-titlu);
+  font-size: 34px; font-weight: 800; color: var(--alb);
+  margin-bottom: 14px; line-height: 1.1;
+}
+.footer-dl-desc {
+  font-family: var(--font-text);
+  font-size: 14px; color: rgba(255,255,255,.55); line-height: 1.65;
+  max-width: 420px; margin-bottom: 20px;
+}
+.footer-dl-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge {
+  font-family: var(--font-titlu);
+  font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 3px;
+  background: rgba(255,255,255,.07); color: rgba(255,255,255,.4);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-dl-right {
+  display: flex; flex-direction: column; gap: 12px; min-width: 240px;
+}
+.btn-dl {
+  display: inline-block; text-decoration: none;
+  font-family: var(--font-titlu);
+  font-size: 13px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase;
+  padding: 20px 40px; border-radius: 5px; text-align: center; cursor: pointer;
+  background: var(--galben-vibrant); color: var(--albastru-profund); border: none;
+  transition: opacity .2s;
+}
+.btn-dl:hover { opacity: .88; }
+.btn-dl-sec {
+  display: inline-block; text-decoration: none;
+  font-family: var(--font-titlu);
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  padding: 14px 32px; border-radius: 5px; text-align: center; cursor: pointer;
+  background: transparent; color: rgba(255,255,255,.6);
+  border: 1px solid rgba(255,255,255,.18);
+  transition: border-color .2s, color .2s;
+}
+.btn-dl-sec:hover { border-color: rgba(255,255,255,.4); color: var(--alb); }
+
+.footer-bottom {
+  padding: 28px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-tricolor { display: flex; gap: 5px; }
+.ftc { width: 24px; height: 4px; border-radius: 2px; }
+.ftc1 { background: #002B7F; }
+.ftc2 { background: #FCD116; }
+.ftc3 { background: #CE1126; }
+.footer-copy {
+  font-family: var(--font-text);
+  font-size: 11px; color: rgba(255,255,255,.2);
+}
+</style>
+</head>
+<body>
+
+<!-- TRICOLOR TOP -->
+<div class="tricolor-bar">
+  <div class="tc tc1"></div>
+  <div class="tc tc2"></div>
+  <div class="tc tc3"></div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-logo">
+    <img src="clean/transparent/07-logo-orizontal-negru.png" alt="România">
+  </div>
+  <nav class="header-nav">
+    <a href="#natura"    data-t="nav-natura">Natură</a>
+    <a href="#cultura"   data-t="nav-cultura">Cultură</a>
+    <a href="#patrimoniu" data-t="nav-patrimoniu">Patrimoniu</a>
+    <a href="#brand-kit" data-t="nav-brandkit">Brand Kit</a>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ro" onclick="setLang('ro')">RO</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow" data-t="hero-eyebrow">Identitate Vizuală Națională · National Visual Identity</div>
+    <img class="hero-logo" src="clean/transparent/02-logo-fundal-negru.png" alt="România">
+    <div class="hero-title" data-t="hero-title">România</div>
+    <div class="hero-subtitle" data-t="hero-subtitle">Descoperă · Discover · Entdecke</div>
+    <div class="hero-cta">
+      <a class="btn-primary" href="#natura" data-t="hero-cta">Descoperă România</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <div class="scroll-label">scroll</div>
+  </div>
+</section>
+
+<!-- NATURĂ -->
+<section id="natura">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-meta">
+      <div class="section-eyebrow" data-t="s1-eyebrow">Natură</div>
+      <div class="section-title" data-t="s1-title">Peisaje de neuitat</div>
+    </div>
+  </div>
+  <div class="editorial-grid grid-3-asym">
+    <div class="gcell span-row2" onclick="openPopup('natura-carpati')">
+      <img class="cell-bg" src="photos/01-carpati.jpg" alt="Carpați">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-carpati">Munții Carpați</div>
+        <div class="gcell-title" data-t="lbl-carpati">Acoperișul României</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('natura-delta')">
+      <img class="cell-bg" src="photos/02-delta-dunarii.jpg" alt="Delta Dunării">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-delta">Delta Dunării</div>
+        <div class="gcell-title" data-t="lbl-delta">Biodiversitate unică</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('natura-retezat')">
+      <img class="cell-bg" src="photos/09-retezat.jpg" alt="Retezat">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-retezat">Parcuri Naționale</div>
+        <div class="gcell-title" data-t="lbl-retezat">Natură sălbatică</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('natura-litoral')">
+      <img class="cell-bg" src="photos/08-litoral.jpg" alt="Litoral">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-litoral">Marea Neagră</div>
+        <div class="gcell-title" data-t="lbl-litoral">245 km de litoral</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('natura-padure')">
+      <img class="cell-bg" src="photos/10-padure.jpg" alt="Pădure">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-padure">Păduri Seculare</div>
+        <div class="gcell-title" data-t="lbl-padure">3M ha de pădure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURĂ -->
+<section id="cultura">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-meta">
+      <div class="section-eyebrow" data-t="s2-eyebrow">Cultură</div>
+      <div class="section-title" data-t="s2-title">Tradiții vii</div>
+    </div>
+  </div>
+  <div class="editorial-grid grid-3-rev">
+    <div class="gcell" onclick="openPopup('cultura-traditional')">
+      <img class="cell-bg" src="photos/03-traditional.jpg" alt="Tradițional">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-traditional">Costum Tradițional</div>
+        <div class="gcell-title" data-t="lbl-traditional">Ie românească</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('cultura-gastronomie')">
+      <img class="cell-bg" src="photos/04-gastronomie.jpg" alt="Gastronomie">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-gastro">Gastronomie</div>
+        <div class="gcell-title" data-t="lbl-gastro">Bucătărie autentică</div>
+      </div>
+    </div>
+    <div class="gcell span-col3" onclick="openPopup('cultura-dans')">
+      <img class="cell-bg" src="photos/18-dans-traditional.jpg" alt="Dans">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-dans">Muzică &amp; Dans</div>
+        <div class="gcell-title" data-t="lbl-dans">Ritmuri milenare</div>
+      </div>
+    </div>
+    <div class="gcell span-col2" onclick="openPopup('cultura-sat')">
+      <img class="cell-bg" src="photos/11-sat-traditional.jpg" alt="Sat">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-sat">Sat Tradițional</div>
+        <div class="gcell-title" data-t="lbl-sat">Viața la sat</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATRIMONIU -->
+<section id="patrimoniu">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-meta">
+      <div class="section-eyebrow" data-t="s3-eyebrow">Patrimoniu</div>
+      <div class="section-title" data-t="s3-title">8 situri UNESCO</div>
+    </div>
+  </div>
+  <div class="editorial-grid grid-2">
+    <div class="gcell" onclick="openPopup('patrimoniu-peles')">
+      <img class="cell-bg" src="photos/05-peles.jpg" alt="Peleș">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-peles">Castelul Peleș</div>
+        <div class="gcell-title" data-t="lbl-peles">Bijuteria Carpaților</div>
+      </div>
+    </div>
+    <div class="gcell" onclick="openPopup('patrimoniu-voronet')">
+      <img class="cell-bg" src="photos/06-voronet.jpg" alt="Voroneț">
+      <div class="gcell-overlay"></div>
+      <div class="gcell-content">
+        <div class="gcell-tag" data-t="tag-voronet">Mânăstirea Voroneț</div>
+        <div class="gcell-title" data-t="lbl-voronet">Albastrul de Voroneț</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER with Brand Kit download -->
+<footer id="brand-kit" class="site-footer">
+  <div class="footer-download">
+    <div class="footer-dl-left">
+      <div class="footer-dl-eyebrow" data-t="dl-eyebrow">România · Brand Kit 2026</div>
+      <img class="footer-dl-logo" src="clean/transparent/08-doar-text-negru.png" alt="România">
+      <div class="footer-dl-title" data-t="dl-title">Descarcă Brand Kit-ul</div>
+      <div class="footer-dl-desc" data-t="dl-desc">Logo-uri SVG/PNG, paleta de culori, ghid tipografie, brand book 259 pagini. Tot ce ai nevoie pentru a aplica corect identitatea vizuală națională.</div>
+      <div class="footer-dl-badges">
+        <span class="badge">SVG</span>
+        <span class="badge">PNG</span>
+        <span class="badge">PDF</span>
+        <span class="badge">Brand Book</span>
+      </div>
+    </div>
+    <div class="footer-dl-right">
+      <a class="btn-dl" data-t="btn-dl" href="brand-kit.zip" download="Romania-Brand-Kit-2026.zip">Download Brand Kit</a>
+      <a class="btn-dl-sec" data-t="btn-dl-sec" href="brand-book-complet/brand-book-complet.html" target="_blank" rel="noopener">Brand Book Online</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <img class="footer-logo" src="clean/transparent/08-doar-text-negru.png" alt="România">
+    <div class="footer-tricolor">
+      <div class="ftc ftc1"></div>
+      <div class="ftc ftc2"></div>
+      <div class="ftc ftc3"></div>
+    </div>
+    <div class="footer-copy" data-t="footer-copy">© 2026 · România · Identitate Vizuală Națională</div>
+  </div>
+</footer>
+
+<link rel="stylesheet" href="popup.css">
+<script src="lang.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
